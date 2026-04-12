@@ -94,3 +94,31 @@ A plataforma está sendo pensada para atender vítimas de violência doméstica 
 
 ### Protótipo Interativo
 https://www.figma.com/proto/lXR7KDcyXh9lFUwJEylr2W/G3---Viol%C3%AAncia-Dom%C3%A9stica?node-id=0-1&t=XKzTYKPgA9dVrI8V-1
+
+# Metodologia
+
+## Ferramentas
+
+Para o desenvolvimento do projeto, a equipe escolheu ferramentas que facilitam tanto a organização do trabalho quanto a comunicação entre os membros, levando em conta a praticidade e a familiaridade do grupo com cada uma delas.
+
+O (1) Visual Studio Code foi escolhido como editor de código por ser leve, gratuito e amplamente utilizado no desenvolvimento web, além de contar com diversas extensões que agilizam o trabalho.
+
+Para o versionamento e hospedagem do código, a equipe utiliza o (2) Git em conjunto com o (3) GitHub, o que permite que todos os membros trabalhem de forma colaborativa, acompanhem o histórico de alterações e mantenham o projeto organizado.
+
+O (4) Figma foi adotado como ferramenta de design e prototipação, sendo utilizado para a criação dos wireframes e do protótipo interativo da plataforma, por ser uma ferramenta online, intuitiva e colaborativa.
+
+O (5) Miro foi utilizado durante o processo de discovery e ideação, apoiando a construção de artefatos como a Matriz CSD, o Mapa de Stakeholders, as Personas e o Brainstorming da equipe.
+
+Por fim, o (6) WhatsApp é a principal ferramenta de comunicação do grupo, sendo usado para alinhamentos rápidos, troca de informações e organização das tarefas do dia a dia.
+
+## Organização da equipe e divisão de papéis
+
+Para organizar o trabalho, a equipe decidiu adotar o framework Scrum, realizando reuniões periódicas para alinhar o que estava sendo feito, conversar sobre dificuldades e planejar os próximos passos juntos. Essa dinâmica ajudou o grupo a manter um bom ritmo de trabalho e a tomar decisões de forma mais colaborativa ao longo de todo o processo.
+
+A equipe é formada por Anna Luiza, Beatriz Almeida, Giovana Faria, Lukas Nathan, Maria Luiza e Matheus Campos, e desde o início a escolha foi trabalhar de forma horizontal, sem hierarquias rígidas. Cada integrante participou de todas as etapas do projeto, desde as pesquisas e a ideação até o design e o desenvolvimento, contribuindo com suas perspectivas e habilidades em cada momento. Essa forma de trabalhar fortaleceu o senso de equipe e fez com que o projeto fosse construído de verdade por todos.
+
+## Quadro de controle de tarefas (Kanban)
+
+Para que ninguém se perdesse, a equipe utilizou o Trello para organizar e acompanhar as tarefas do projeto. Com um quadro visual e fácil de entender, todos conseguiam saber em tempo real o que ainda precisava ser feito, o que estava em andamento e o que já tinha sido entregue.
+
+O quadro foi dividido em três colunas: A fazer, com as tarefas que ainda estavam esperando para ser iniciadas; Em andamento, com o que já estava sendo trabalhado por algum membro da equipe; e Concluído, para onde as tarefas iam assim que eram finalizadas. Essa dinâmica simples ajudou muito na organização do grupo e deixou o trabalho em equipe mais leve e transparente para todos.
