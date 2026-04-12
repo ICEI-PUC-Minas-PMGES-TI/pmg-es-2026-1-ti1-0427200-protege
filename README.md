@@ -42,22 +42,22 @@ A plataforma está sendo pensada para atender vítimas de violência doméstica 
 ## Personas
 
 ### Persona 1
-<img src="./imgs/Processo_Product_Discovery/Personas_Imgs/G3 - Violência Doméstica - Personas_01.jpg">
+<img src="./imgs/Processo_Product_Discovery/Personas_Imgs/G3 - Violência Doméstica - Personas_01.png">
 
 ### Persona 2
-<img src="./imgs/Processo_Product_Discovery/Personas_Imgs/G3 - Violência Doméstica - Personas_02.jpg">
+<img src="./imgs/Processo_Product_Discovery/Personas_Imgs/G3 - Violência Doméstica - Personas_02.png">
 
 ### Persona 3
-<img src="./imgs/Processo_Product_Discovery/Personas_Imgs/G3 - Violência Doméstica - Personas_03.jpg">
+<img src="./imgs/Processo_Product_Discovery/Personas_Imgs/G3 - Violência Doméstica - Personas_03.png">
 
 ### Persona 4
-<img src="./imgs/Processo_Product_Discovery/Personas_Imgs/G3 - Violência Doméstica - Personas_04.jpg">
+<img src="./imgs/Processo_Product_Discovery/Personas_Imgs/G3 - Violência Doméstica - Personas_04.png">
 
 ### Persona 5
-<img src="./imgs/Processo_Product_Discovery/Personas_Imgs/G3 - Violência Doméstica - Personas_05.jpg">
+<img src="./imgs/Processo_Product_Discovery/Personas_Imgs/G3 - Violência Doméstica - Personas_05.png">
 
 ### Persona 6
-<img src="./imgs/Processo_Product_Discovery/Personas_Imgs/G3 - Violência Doméstica - Personas_06.jpg">
+<img src="./imgs/Processo_Product_Discovery/Personas_Imgs/G3 - Violência Doméstica - Personas_06.png">
 
 # Processo de Product Design
 
