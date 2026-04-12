@@ -37,7 +37,7 @@ A plataforma está sendo pensada para atender vítimas de violência doméstica 
 # Processo de Product Discovery
 
 ## Matriz CSD & Mapa de stakeholders 
-<img src="./imgs/G3 - Violência Doméstica - MatrizCSD_MapaStakeHolders.jpg">
+<img src="./imgs/Processo_Product_Discovery/G3 - Violência Doméstica - MatrizCSD_MapaStakeHolders.jpg">
 
 ## Personas
 
