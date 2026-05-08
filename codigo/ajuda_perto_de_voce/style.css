@@ -2,10 +2,11 @@ body {
     background-color: #eae8f5;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    margin-top: 40px;
 }
 
 .busca {
@@ -43,8 +44,27 @@ body {
     color: #ffffff;
     font-size: 1.1rem;
 }
-#tela{
+#tela {
     margin-top: 20px;
-    color: #555;
+    width: 100%;
+    max-width: 700px;
+}
+
+.card-local {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card-local h2 {
+    color: #9b8ec4;
     font-size: 1rem;
+}
+
+.card-local p {
+    margin: 4px 0 0;
+    color: #666;
+    font-size: 0.9rem;
 }
