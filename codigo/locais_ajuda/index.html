@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locais de ajuda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Locais de ajuda</h1>
+    <div class="filtros">
+        <p class="filtro-titulo">Público</p>
+        <div class="filtro-grupo">
+            <label><input type="checkbox" value="criança"> Criança</label>
+            <label><input type="checkbox" value="adolescente"> Adolescente</label>
+            <label><input type="checkbox" value="adulto"> Adulto</label>
+            <label><input type="checkbox" value="idoso"> Idoso</label>
+        </div>
+
+        <p class="filtro-titulo">Tipo de local</p>
+        <div class="filtro-grupo">
+            <label><input type="checkbox" value="hospital"> Hospital</label>
+            <label><input type="checkbox" value="delegacia"> Delegacia</label>
+            <label><input type="checkbox" value="ong"> ONG</label>
+            <label><input type="checkbox" value="apoio"> Apoio</label>
+        </div>
+    </div>
+
+    <div id="tela"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
