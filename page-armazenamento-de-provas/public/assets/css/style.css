@@ -1,0 +1,149 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100vh;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ece8f2;
+    color:#222;
+}
+
+/* INDEX */
+
+.home-header{
+
+    width:100%;
+
+    min-height:40vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:60px 20px;
+}
+
+.home-header h1{
+
+    font-size:52px;
+
+    color:#2450ff;
+
+    margin-bottom:20px;
+}
+
+.home-header p{
+
+    font-size:22px;
+
+    max-width:900px;
+
+    margin-bottom:30px;
+}
+
+.home-header a{
+
+    width:100%;
+
+    max-width:500px;
+}
+
+.home-main{
+
+    width:100%;
+
+    min-height:60vh;
+
+    padding:40px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+    align-content:start;
+}
+
+.info-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+}
+
+.info-card:hover{
+
+    transform:translateY(-5px);
+}
+
+.info-card h2{
+
+    color:#2450ff;
+
+    margin-bottom:15px;
+
+    font-size:30px;
+}
+
+.info-card p{
+
+    font-size:18px;
+
+    line-height:1.6;
+}
+
+
+
+/* BOTÕES */
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-top:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2450ff;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    background:#183dc9;
+}
