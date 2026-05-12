@@ -1,0 +1,18 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "email": "admin@email.com",
+      "senha": "123456"
+    }
+  ],
+
+  "arquivos": [
+    {
+      "id": 1,
+      "titulo": "Documento PDF",
+      "tipo": "PDF",
+      "descricao": "Arquivo importante"
+    }
+  ]
+}
