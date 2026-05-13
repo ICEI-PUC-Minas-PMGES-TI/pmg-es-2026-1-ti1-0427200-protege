@@ -50,3 +50,56 @@ main{
     font-size:30px;
 }
 
+input,
+textarea{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-top:15px;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    font-size:16px;
+}
+
+textarea{
+
+    resize:none;
+
+    height:120px;
+}
+
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-top:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2450ff;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    background:#183dc9;
+}
