@@ -72,3 +72,19 @@ await fetch(
         body:JSON.stringify(arquivo)
     }
 );
+formulario.reset();
+
+listarArquivos();
+
+async function listarArquivos(){
+
+    const resposta =
+    await fetch(
+        "http://localhost:3000/arquivos"
+    );
+
+    const dados =
+    await resposta.json();
+
+    lista.innerHTML = "";
+}
