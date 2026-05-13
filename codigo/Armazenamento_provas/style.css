@@ -1,0 +1,61 @@
+body {
+  background: #f8fafc;
+  font-family: Arial, sans-serif;
+  color: #334155;
+}
+
+.tela {
+  display: none;
+}
+
+.ativa {
+  display: block;
+}
+
+.cabecalho {
+  background: white;
+  color: #1e293b;
+  font-size: 24px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.orientacao-mensagem {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #64748b;
+}
+
+.grade-botoes button {
+  width: 200px;
+  height: 65px;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+#lista-arquivos {
+  min-height: 150px;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.rodape {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#btn-relatorio {
+  padding: 12px 24px;
+  border-radius: 10px;
+}
+
+#lista-confirmacao {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+}
