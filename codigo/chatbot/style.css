@@ -64,6 +64,7 @@ h1 {
   background-color: #c94444;
 }
 
+/* Mensagen */
 
 main {
   padding: 24px 20px 10px 20px;
@@ -83,4 +84,153 @@ p.mensagem {
   font-weight: 600;
   max-width: 85%;
 }
+
+
+/*Opção do sim e não */
+
+section {
+  background-color: #ede8f8;
+  margin: 10px 20px 20px 20px;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
  
+label.opcao {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+ 
+label.opcao:hover {
+  border-color: #8b69d4;
+}
+ 
+.caixinha {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #c5bce0;
+  border-radius: 6px;
+  background: white;
+  flex-shrink: 0;
+}
+ 
+.nome-opcao {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #2d2044;
+  min-width: 48px;
+}
+ 
+.descricao-opcao {
+  font-size: 0.82rem;
+  color: #5a4880;
+  line-height: 1.4;
+  text-align: center;
+  flex: 1;
+}
+
+
+* rodape com input */
+footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px 20px 20px;
+  border-top: 1px solid #d5cff0;
+}
+ 
+.input-mensagem {
+  flex: 1;
+  background: #f4f2fc;
+  border: 1.5px solid #d5cff0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  font-family: Verdana;
+  color: #2d2044;
+  outline: none;
+}
+ 
+.input-mensagem::placeholder {
+  color: #b0a8cc;
+}
+ 
+.input-mensagem:focus {
+  border-color: #a07ee0;
+}
+ 
+.btn-enviar {
+  background: #7c5cbf;
+  border: none;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.btn-enviar:hover {
+  background: #a07ee0;
+}
+ 
+.btn-enviar svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+}
+ 
+/* quando clica fica marcado */
+label.opcao.marcado .caixinha {
+  background-color: #8b69d4;
+  border-color: #8b69d4;
+}
+
+/*rodapé*/
+footer {
+      padding: 12px 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-top: 1.5px solid var(--border);
+      margin-top: 10px;
+    }
+ 
+    .campo-mensagem {
+      flex: 1;
+      background: var(--input-bg);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      font-family: inherit;
+      color: #2d2044;
+      outline: none;
+      transition: border-color 0.18s;
+    }
+    .campo-mensagem::placeholder { color: #b0a8cc; }
+    .campo-mensagem:focus { border-color: #a07ee0; }
+ 
+    .btn-enviar {
+      background: #7c5cbf;
+      border: none;
+      border-radius: 10px;
+      width: 40px; height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background 0.18s, transform 0.12s;
+    }
+    .btn-enviar:hover { background: #a07ee0; transform: scale(1.08); }
+    .btn-enviar svg { width: 18px; height: 18px; fill: #fff; }

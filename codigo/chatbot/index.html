@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Bot Anôimo </title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <header>
@@ -33,6 +35,41 @@
 
 
   </main>
+ <section>
+
+
+  <label class="opcao" id="sim" onclick="marcar('sim')">
+    <div class="caixinha"></div>
+    <span class="nome-opcao">SIM!</span>
+
+
+    <span class="descricao-opcao">Você será direcionado(a) para a área de SOS</span>
+
+
+  </label>
+
+  <label class="opcao" id="nao" onclick="marcar('nao')">
+    <div class="caixinha"></div>
+    <span class="nome-opcao">NÃO!</span>
+
+
+    <span class="descricao-opcao">Um de nossos funcionários irá atendê-lo(a) em breve.</span>
+
+
+  </label>
+</section>
+
+
+<footer>
+  <input class="input-mensagem" type="text" placeholder="Enviar mensagem..." id="campo">
+
+  <button class="btn-enviar" onclick="enviar()">
+    <svg viewBox="0 0 24 24">
+      <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+    </svg>
+  </button>
+  
+</footer>
 
 </body>
 </html>
