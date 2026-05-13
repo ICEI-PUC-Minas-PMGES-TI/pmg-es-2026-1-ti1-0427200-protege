@@ -13,68 +13,83 @@ formulario.addEventListener(
     e.preventDefault();
 
     const titulo =
-document.querySelector("#titulo").value;
+    document.querySelector("#titulo").value;
 
-const tipo =
-document.querySelector("#tipo").value;
+    const tipo =
+    document.querySelector("#tipo").value;
 
-const descricao =
-document.querySelector("#descricao").value;
+    const descricao =
+    document.querySelector("#descricao").value;
 
-const arquivoInput =
-document.querySelector("#arquivoInput");
+    const arquivoInput =
+    document.querySelector("#arquivoInput");
 
-const arquivoSelecionado =
-arquivoInput.files[0];
+    const arquivoSelecionado =
+    arquivoInput.files[0];
+
+    if(!arquivoSelecionado){
+
+        alert("Selecione um arquivo");
+
+        return;
     }
-)
 
-if(!arquivoSelecionado){
+    const leitor = new FileReader();
 
-    alert("Selecione um arquivo");
+    leitor.onload = async function(evento){
 
-    return;
-}
+        const arquivo = {
 
-const leitor = new FileReader();
+            titulo: titulo,
 
-leitor.onload = async function(evento){
+            tipo: tipo,
 
-const arquivo = {
+            descricao: descricao,
 
-    titulo: titulo,
+            arquivoNome:
+            arquivoSelecionado.name,
 
-    tipo: tipo,
+            arquivoTipo:
+            arquivoSelecionado.type,
 
-    descricao: descricao,
+            arquivoURL:
+            evento.target.result
+        };
 
-    arquivoNome:
-    arquivoSelecionado.name,
+        try{
 
-    arquivoTipo:
-    arquivoSelecionado.type,
+            await fetch(
+                "http://localhost:3000/arquivos",
+                {
+                    method:"POST",
 
-    arquivoURL:
-    evento.target.result
+                    headers:{
+                        "Content-Type":
+                        "application/json"
+                    },
+
+                    body:JSON.stringify(arquivo)
+                }
+            );
+
+            alert("Arquivo salvo!");
+
+            formulario.reset();
+
+            listarArquivos();
+
+        }catch(error){
+
+            console.log(error);
+
+            alert("Erro ao salvar");
+        }
     };
-}
 
-await fetch(
-    "http://localhost:3000/arquivos",
-    {
-        method:"POST",
-
-        headers:{
-            "Content-Type":
-            "application/json"
-        },
-
-        body:JSON.stringify(arquivo)
-    }
-);
-formulario.reset();
-
-listarArquivos();
+    leitor.readAsDataURL(
+        arquivoSelecionado
+    );
+});
 
 async function listarArquivos(){
 
@@ -86,5 +101,155 @@ async function listarArquivos(){
     const dados =
     await resposta.json();
 
+    const lista =
+    document.querySelector("#listaArquivos");
+
     lista.innerHTML = "";
+
+    dados.forEach((item) => {
+
+        let preview = "";
+
+        if(
+            item.arquivoTipo &&
+            item.arquivoTipo.startsWith("image/")
+        ){
+
+            preview = `
+                <img
+                    src="${item.arquivoURL}"
+                    class="preview-img"
+                >
+            `;
+
+        }else if(
+            item.arquivoTipo &&
+            item.arquivoTipo.startsWith("video/")
+        ){
+
+            preview = `
+                <video
+                    controls
+                    class="preview-video"
+                >
+                    <source
+                        src="${item.arquivoURL}"
+                    >
+                </video>
+            `;
+
+        }else{
+
+            preview = `
+                <iframe
+                    src="${item.arquivoURL}"
+                    class="pdf-preview"
+                >
+                </iframe>
+            `;
+        }
+
+        lista.innerHTML += `
+
+        <div class="card">
+
+            <h3>${item.titulo}</h3>
+
+            <p>
+                <strong>Tipo:</strong>
+                ${item.tipo}
+            </p>
+
+            <p>
+                ${item.descricao}
+            </p>
+
+            <p>
+                <strong>Arquivo:</strong>
+                ${item.arquivoNome}
+            </p>
+
+            ${preview}
+
+            <button
+                onclick="editarArquivo(${item.id})"
+            >
+                Editar
+            </button>
+
+            <button
+                onclick="excluirArquivo(${item.id})"
+            >
+                Excluir
+            </button>
+
+        </div>
+        `;
+    });
+}
+
+async function excluirArquivo(id){
+
+    await fetch(
+        `http://localhost:3000/arquivos/${id}`,
+        {
+            method:"DELETE"
+        }
+    );
+
+    listarArquivos();
+}
+
+async function editarArquivo(id){
+
+    const novoTitulo =
+    prompt("Novo título:");
+
+    const novoTipo =
+    prompt("Novo tipo:");
+
+    const novaDescricao =
+    prompt("Nova descrição:");
+
+    const resposta =
+    await fetch(
+        `http://localhost:3000/arquivos/${id}`
+    );
+
+    const arquivoAtual =
+    await resposta.json();
+
+    const atualizado = {
+
+        ...arquivoAtual,
+
+        titulo: novoTitulo,
+
+        tipo: novoTipo,
+
+        descricao: novaDescricao
+    };
+
+    await fetch(
+        `http://localhost:3000/arquivos/${id}`,
+        {
+            method:"PUT",
+
+            headers:{
+                "Content-Type":
+                "application/json"
+            },
+
+            body:JSON.stringify(atualizado)
+        }
+    );
+
+    listarArquivos();
+}
+
+function logout(){
+
+    alert("Logout realizado!");
+
+    window.location.href = "index.html";
 }
