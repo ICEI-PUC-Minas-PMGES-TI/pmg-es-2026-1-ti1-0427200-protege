@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Armazenamento de Provas</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header>
+
+        <h1>
+            ARMAZENE SEUS DOCUMENTOS E PROVAS AGORA
+        </h1>
+
+        <button onclick="logout()">
+            Sair
+        </button>
+
+    </header>
+
+    <main>
+
+        <section class="formulario">
+
+            <h2>Cadastrar Arquivo</h2>
+
+            <form id="arquivoForm">
+
+    <input
+        type="text"
+        id="titulo"
+        placeholder="Título"
+        required
+    >
+
+    <input
+        type="text"
+        id="tipo"
+        placeholder="Tipo"
+        required
+    >
+
+    <textarea
+        id="descricao"
+        placeholder="Descrição"
+    ></textarea>
+
+    <input
+        type="file"
+        id="arquivoInput"
+        accept="image/*,video/*,.pdf"
+        required
+    >
+
+    <button type="submit">
+        Salvar Arquivo
+    </button>
+
+</form>
+        <section>
+
+            <h2>Arquivos Salvos</h2>
+
+            <div id="listaArquivos"></div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
