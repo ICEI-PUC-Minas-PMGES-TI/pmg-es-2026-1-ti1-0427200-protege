@@ -56,6 +56,19 @@ const arquivo = {
 
     arquivoURL:
     evento.target.result
-};
-
+    };
 }
+
+await fetch(
+    "http://localhost:3000/arquivos",
+    {
+        method:"POST",
+
+        headers:{
+            "Content-Type":
+            "application/json"
+        },
+
+        body:JSON.stringify(arquivo)
+    }
+);
