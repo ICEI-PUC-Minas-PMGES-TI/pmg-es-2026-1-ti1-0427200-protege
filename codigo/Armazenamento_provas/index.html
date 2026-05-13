@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="tela-principal" class="tela ativa"></div>
+    <div class="cabecalho">
+      <i class="icone cadeado"></i>
+      <span>Minhas provas - Só você tem acesso</span>
+    </div>
+    <p class="orientacao-mensagem">Guarde nesse local sua prova...</p>
+    <div class="grade-botoes">
+      <button class="tipo-foto" onclick="escolherArquivo('foto')">
+        <i class="ti-foto"></i>
+        Foto
+      </button>
+      <input
+        type="file"
+        id="seletor-arquivp"
+        onchange="arquivoSelecionado(this)"
+      />
+      <div id="lista-arquivos">
+        <p class="lista-vazia" id="msg-vazia">...</p>
+      </div>
+      <div class="rodape">
+        <span id="contador">0 arquivos</span>
+        <button ... disabled onclick="IrParaConfirmacao()">
+          Gerar relatório
+        </button>
+      </div>
+    </div>
+ <!-- Tela 2 -->
+    <div id="lista-confirmacao" class="tela">
+    <div id="lista-confirmacao"></div>
+<!-- lembrar de ficar no final -->
+    <script src="script.js"></script> 
+  </body>
+</html>
