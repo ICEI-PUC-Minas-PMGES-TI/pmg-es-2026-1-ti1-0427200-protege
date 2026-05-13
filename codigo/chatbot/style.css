@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  background-color: #eceaf8;
+  font-family: Verdana;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+ 
+article {
+  background: white;
+  width: 560px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+}
+
+
+/*cabeçalho */
+    header {
+  background-color: #eceaf8;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+  border-bottom: 1px solid #d5cff0;
+}
+ 
+/* bolinha verde */
+.bolinha {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  background: #5cb85c;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+ 
+h1 {
+  font-size: 1.1rem;
+  color: #2d2044;
+  display: inline;
+}
+ 
+/* botao sair vermelho */
+.btn-sair {
+  background-color: #e05555;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+ 
+.btn-sair:hover {
+  background-color: #c94444;
+}
+
+
+main {
+  padding: 24px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+ 
+p.mensagem {
+  background-color: oklch(60.334% 0.1589 295.943);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 16px;
+  border-bottom-left-radius: 4px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  font-weight: 600;
+  max-width: 85%;
+}
+ 
