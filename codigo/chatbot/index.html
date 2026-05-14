@@ -8,68 +8,71 @@
 
 </head>
 <body>
-    <header>
-    <span>
+    <article>
+        <header>
+            <span>
       
-        <i class="bolinha"></i>
+                <i class="bolinha"></i>
       
-        <h1> Chat bot anônimo  </h1>
-    </span>
+                <h1> Chat bot anônimo  </h1>
+            </span>
 
-    <span>
-      <span style="font-size:2.8rem">🤖</span>
-      <button class="btn-sair">Sair</button>
-    </span>
-  </header>
-
-
-
-  <main>
-    <p class="mensagem">🤖 Você está em um chat seguro e anônimo<br>Nenhum dado pessoal será salvo</p>
-
-    <p class="mensagem">🤖 Assistente inicial (triagem)
-
-    </p>
-
-    <p class="mensagem">🤖 Olá, estou aqui para te ajudar.<br>Você está em perigo imediato?</p>
+            <span>
+                <span style="font-size:2.8rem">🤖</span>
+                <button class="btn-sair">Sair</button>
+                </span>
+        </header>
 
 
-  </main>
- <section>
+
+        <main>
+            <p class="mensagem">🤖 Você está em um chat seguro e anônimo<br>Nenhum dado pessoal será salvo</p>
+
+            <p class="mensagem">🤖 Assistente inicial (triagem)
+
+            </p>
+
+            <p class="mensagem">🤖 Olá, estou aqui para te ajudar.<br>Você está em perigo imediato?</p>
 
 
-  <label class="opcao" id="sim" onclick="marcar('sim')">
-    <div class="caixinha"></div>
-    <span class="nome-opcao">SIM!</span>
+        </main>
+        <section>
 
 
-    <span class="descricao-opcao">Você será direcionado(a) para a área de SOS</span>
+            <label class="opcao" id="sim" onclick="marcar('sim')">
+                <div class="caixinha"></div>
+                <span class="nome-opcao">SIM!</span>
 
 
-  </label>
-
-  <label class="opcao" id="nao" onclick="marcar('nao')">
-    <div class="caixinha"></div>
-    <span class="nome-opcao">NÃO!</span>
+                <span class="descricao-opcao">Você será direcionado(a) para a área de SOS</span>
 
 
-    <span class="descricao-opcao">Um de nossos funcionários irá atendê-lo(a) em breve.</span>
+            </label>
+
+            <label class="opcao" id="nao" onclick="marcar('nao')">
+                <div class="caixinha"></div>
+                <span class="nome-opcao">NÃO!</span>
 
 
-  </label>
-</section>
+                <span class="descricao-opcao">Um de nossos funcionários irá atendê-lo(a) em breve.</span>
 
 
-<footer>
-  <input class="input-mensagem" type="text" placeholder="Enviar mensagem..." id="campo">
+            </label>
+        </section>
 
-  <button class="btn-enviar" onclick="enviar()">
-    <svg viewBox="0 0 24 24">
-      <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-    </svg>
-  </button>
-  
-</footer>
 
+        <footer>
+            <input class="input-mensagem" type="text" placeholder="Enviar mensagem..." id="campo">
+
+            <button class="btn-enviar" onclick="enviar()">
+                <svg viewBox="0 0 24 24">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                 </svg>
+            </button>
+
+        </footer>
+    </article>
+
+    <script src="script.js"></script>
 </body>
 </html>
