@@ -45,12 +45,13 @@ violencias.forEach(item => {
       <div class="card-content">
         <p>${item.descricao}</p>
 
-        <button class="btn">
-          Saiba mais
-        </button>
+        <button class="btn" onclick="mostrarMensagem()"> Saiba mais </button>
       </div>
 
     </div>
   
   `;
 });
+function mostrarMensagem() {
+  alert("Se você conhece alguém em situação de violência doméstica, denuncie pelo 180.");
+}
