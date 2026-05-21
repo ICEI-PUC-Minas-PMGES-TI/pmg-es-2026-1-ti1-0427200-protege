@@ -1,28 +1,33 @@
-const form = document.querySelector("#loginForm");
+const form =
+document.querySelector("#loginForm");
 
-form.addEventListener("submit", async (e) => {
+form.addEventListener(
+    "submit",
+    async (e) => {
 
     e.preventDefault();
 
-    const email =
-    document.querySelector("#email").value;
+    const login =
+    document.querySelector("#login").value;
 
     const senha =
     document.querySelector("#senha").value;
 
     try{
 
-        const resposta = await fetch(
+        const resposta =
+        await fetch(
             "http://localhost:3000/usuarios"
         );
 
-        const usuarios = await resposta.json();
+        const usuarios =
+        await resposta.json();
 
         const usuarioEncontrado =
         usuarios.find((usuario) => {
 
             return (
-                usuario.email === email &&
+                usuario.login === login &&
                 usuario.senha === senha
             );
         });
@@ -34,6 +39,11 @@ form.addEventListener("submit", async (e) => {
                 "true"
             );
 
+            localStorage.setItem(
+                "nomeUsuario",
+                usuarioEncontrado.nome
+            );
+
             alert("Login realizado!");
 
             window.location.href =
@@ -41,7 +51,7 @@ form.addEventListener("submit", async (e) => {
 
         }else{
 
-            alert("Email ou senha inválidos");
+            alert("Login ou senha inválidos");
         }
 
     }catch(error){
@@ -49,7 +59,7 @@ form.addEventListener("submit", async (e) => {
         console.log(error);
 
         alert(
-            "Erro ao conectar com o servidor"
+            "Erro ao conectar com servidor"
         );
     }
 });
