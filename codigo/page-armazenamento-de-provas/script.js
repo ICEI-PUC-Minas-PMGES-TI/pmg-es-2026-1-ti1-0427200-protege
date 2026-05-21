@@ -1,3 +1,12 @@
+const usuarioLogado =
+localStorage.getItem("usuarioLogado");
+
+if(usuarioLogado !== "true"){
+
+    window.location.href =
+    "login.html";
+}
+
 const formulario =
 document.querySelector("#arquivoForm");
 
@@ -249,7 +258,12 @@ async function editarArquivo(id){
 
 function logout(){
 
+    localStorage.removeItem(
+        "usuarioLogado"
+    );
+
     alert("Logout realizado!");
 
-    window.location.href = "index.html";
+    window.location.href =
+    "login.html";
 }
