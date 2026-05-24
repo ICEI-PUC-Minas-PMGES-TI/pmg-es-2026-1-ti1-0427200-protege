@@ -15,21 +15,13 @@
       Compartilhe dúvidas, desafios e receba apoio da comunidade.
     </p>
 
-    <!-- CRIAR POST -->
     <div class="criar-post">
 
       <h2>Publicar nova dúvida</h2>
 
-      <input 
-        type="text" 
-        id="titulo"
-        placeholder="Título da dúvida"
-      >
+      <input type="text" id="titulo" placeholder="Título da dúvida" >
 
-      <textarea 
-        id="descricao"
-        placeholder="Descreva sua dúvida aqui..."
-      ></textarea>
+      <textarea id="descricao" placeholder="Descreva sua dúvida aqui..."></textarea>
 
       <select id="categoria">
         <option value="">Selecione uma categoria</option>
@@ -40,29 +32,18 @@
       </select>
 
       <label class="check">
-        <input type="checkbox" id="anonimo">
-        Publicar anonimamente
-      </label>
+        <input type="checkbox" id="anonimo"> Publicar anonimamente</label>
 
-      <button onclick="criarPost()">
-        Publicar dúvida
-      </button>
+      <button onclick="criarPost()"> Publicar dúvida </button>
 
     </div>
 
-    <!-- PESQUISA -->
     <div class="pesquisa-area">
 
-      <input 
-        type="text"
-        id="pesquisa"
-        placeholder="Buscar dúvidas..."
-        onkeyup="pesquisarPost()"
-      >
+      <input type="text" id="pesquisa" placeholder="Buscar dúvidas..." onkeyup="pesquisarPost()" >
 
     </div>
 
-    <!-- POSTS -->
     <div id="lista-posts"></div>
 
   </section>

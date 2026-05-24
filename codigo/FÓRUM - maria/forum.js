@@ -20,8 +20,6 @@ let posts = JSON.parse(localStorage.getItem("posts")) || [
 ];
 
 
-
-// MOSTRAR POSTS
 function mostrarPosts(lista = posts){
 
   let areaPosts = document.getElementById("lista-posts");
@@ -73,8 +71,6 @@ function mostrarPosts(lista = posts){
 }
 
 
-
-// CRIAR POST
 function criarPost(){
 
   let titulo = document.getElementById("titulo").value;
@@ -129,8 +125,6 @@ function criarPost(){
 }
 
 
-
-// EXCLUIR
 function excluirPost(id){
 
   posts = posts.filter((post) => post.id != id);
@@ -143,7 +137,6 @@ function excluirPost(id){
 
 
 
-// EDITAR
 function editarPost(id){
 
   let post = posts.find((p) => p.id == id);
@@ -175,9 +168,6 @@ function editarPost(id){
 
 }
 
-
-
-// PESQUISA
 function pesquisarPost(){
 
   let valorPesquisa =
@@ -194,14 +184,10 @@ function pesquisarPost(){
 
   );
 
-
   mostrarPosts(filtrados);
 
 }
 
-
-
-// LOCAL STORAGE
 function salvarLocalStorage(){
 
   localStorage.setItem(
@@ -211,7 +197,4 @@ function salvarLocalStorage(){
 
 }
 
-
-
-// INICIAR
 mostrarPosts();
