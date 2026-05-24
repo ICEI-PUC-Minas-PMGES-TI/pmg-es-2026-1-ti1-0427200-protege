@@ -11,12 +11,13 @@ body{
 }
 
 .forum-container{
-  max-width: 1000px;
+  width: 95%;
+  max-width: 1400px;
   margin: auto;
 }
 
 h1{
-  font-size: 45px;
+  font-size: 55px;
   color: #3d2a66;
   margin-bottom: 10px;
 }
@@ -97,9 +98,9 @@ button:hover{
 
 .post{
   background-color: white;
-  padding: 25px;
+  padding: 35px;
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .categoria{
