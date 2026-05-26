@@ -22,6 +22,30 @@ let posts = JSON.parse(localStorage.getItem("posts")) || [
     descricao: "Estou me sentindo muito pressionada emocionalmente e não sei o que fazer.",
     categoria: "Ajuda psicológica",
     respostas: 5
+  },
+
+  {
+    id: 4,
+    titulo: "Quero denunciar mas tenho medo",
+    descricao: "Tenho provas contra meu companheiro, mas estou com medo das consequências da denúncia.",
+    categoria: "Denúncia",
+    respostas: 14
+  },
+
+  {
+    id: 5,
+    titulo: "Minha família não acredita em mim",
+    descricao: "Contei sobre as agressões que sofro, mas minha família acha que estou exagerando.",
+    categoria: "Denúncia",
+    respostas: 9
+  },
+
+  {
+    id: 6,
+    titulo: "Estou sendo ameaçada pelo meu ex",
+    descricao: "Depois do término, meu ex começou a mandar mensagens agressivas e aparecer perto da minha casa.",
+    categoria: "Ameaça",
+    respostas: 11
   }
 
 ];
