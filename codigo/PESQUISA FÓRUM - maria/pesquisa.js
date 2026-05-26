@@ -87,3 +87,27 @@ function pesquisarPosts(){
   mostrarPosts(filtrados);
 
 }
+
+function filtrarCategoria(categoria){
+
+  if(categoria == "Todas"){
+
+    mostrarPosts(posts);
+
+    return;
+
+  }
+
+
+  let filtrados = posts.filter((post) =>
+
+    post.categoria == categoria
+
+  );
+
+
+  mostrarPosts(filtrados);
+
+}
+
+mostrarPosts(posts);
