@@ -25,3 +25,44 @@ let posts = JSON.parse(localStorage.getItem("posts")) || [
   }
 
 ];
+
+function mostrarPosts(listaPosts){
+
+  let areaPosts = document.getElementById("area-posts");
+
+  areaPosts.innerHTML = "";
+
+
+  listaPosts.forEach((post) => {
+
+    areaPosts.innerHTML += `
+
+      <div class="card">
+
+        <span class="categoria">
+          ${post.categoria}
+        </span>
+
+        <h3>
+          ${post.titulo}
+        </h3>
+
+        <p>
+          ${post.descricao}
+        </p>
+
+        <div class="info">
+          ${post.respostas || 0} respostas
+        </div>
+
+        <button class="ver-mais">
+          Ver discussão
+        </button>
+
+      </div>
+
+    `;
+
+  });
+
+}
