@@ -46,6 +46,22 @@ let posts = JSON.parse(localStorage.getItem("posts")) || [
     descricao: "Depois do término, meu ex começou a mandar mensagens agressivas e aparecer perto da minha casa.",
     categoria: "Ameaça",
     respostas: 11
+  },
+  
+  {
+    id: 7,
+    titulo: "Não consigo sair desse relacionamento",
+    descricao: "Mesmo sabendo que estou em um relacionamento abusivo, tenho medo de terminar e ficar sozinha.",
+    categoria: "Relacionamento abusivo",
+    respostas: 16
+  },
+
+  {
+    id: 8,
+    titulo: "Estou emocionalmente esgotada",
+    descricao: "As situações que venho passando estão afetando minha saúde mental e preciso de apoio psicológico.",
+    categoria: "Ajuda psicológica",
+    respostas: 7
   }
 
 ];
