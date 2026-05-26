@@ -66,3 +66,24 @@ function mostrarPosts(listaPosts){
   });
 
 }
+
+function pesquisarPosts(){
+
+  let valorPesquisa = document
+    .getElementById("pesquisa")
+    .value
+    .toLowerCase();
+
+
+  let filtrados = posts.filter((post) =>
+
+    post.titulo
+      .toLowerCase()
+      .includes(valorPesquisa)
+
+  );
+
+
+  mostrarPosts(filtrados);
+
+}
