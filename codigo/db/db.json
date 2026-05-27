@@ -21,5 +21,51 @@
       "email": "rommel@gmail.com",
       "id": 3
     }
+  ],
+  "arquivos": [],
+  "provas": [
+    {
+      "id": 1,
+      "titulo": "Fotos de hematomas", 
+      "descricao": "Imagens após agressão física.",
+      "tipo": "Imagem",
+      "data": "12/05/2026",
+      "hora": "21:15",
+      "arquivo": "https://images.unsplash.com/photo-1517841905240-472988babdf9",
+      "arquivoTipo": "imagem"
+    },
+
+    {
+      "id": 2,
+      "titulo": "Áudio de ameaça",
+      "descricao": "Gravação de ameaça verbal.",
+      "tipo": "Áudio",
+      "data": "10/05/2026",
+      "hora": "23:40",
+      "arquivo": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      "arquivoTipo": "audio"
+    },
+
+    {
+      "id": 3,
+      "titulo": "Vídeo da discussão",
+      "descricao": "Registro em vídeo.",
+      "tipo": "Vídeo",
+      "data": "08/05/2026",
+      "hora": "19:30",
+      "arquivo": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "arquivoTipo": "video"
+    },
+
+    {
+      "id": 4,
+      "titulo": "Boletim de ocorrência",
+      "descricao": "PDF do boletim.",
+      "tipo": "PDF",
+      "data": "05/05/2026",
+      "hora": "14:20",
+      "arquivo": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      "arquivoTipo": "pdf"
+    }
   ]
 }
