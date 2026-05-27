@@ -67,3 +67,110 @@ body{
 .card:hover{
   transform: translateY(-3px);
 }
+.esquerda{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.icone{
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.vermelho{
+  background: #ff6b6b;
+}
+
+.amarelo{
+  background: #f4b740;
+}
+
+.verde{
+  background: #42c97a;
+}
+
+.roxo{
+  background: #8d5ae9;
+}
+
+.info h2{
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.info p{
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.tipo{
+  font-weight: bold;
+  color: #555;
+}
+
+.direita{
+  text-align: right;
+}
+
+.status{
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.andamento{
+  background: #ffe3e3;
+  color: #d9534f;
+}
+
+.avaliacao{
+  background: #fff2cf;
+  color: #d19a00;
+}
+
+.concluida{
+  background: #daf7e5;
+  color: #239b56;
+}
+
+.arquivada{
+  background: #ececec;
+  color: #777;
+}
+
+.protocolo{
+  font-size: 13px;
+  color: #888;
+}
+
+@media(max-width: 700px){
+
+  .topo{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .card{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .direita{
+    text-align: left;
+  }
+
+}
