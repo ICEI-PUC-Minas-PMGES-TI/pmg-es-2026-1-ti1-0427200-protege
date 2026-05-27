@@ -1,0 +1,277 @@
+/* ===========================
+   RESET E BASE
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* ===========================
+   CABEÇALHO
+=========================== */
+header {
+  background-color: #5a2d82;
+  color: white;
+  padding: 20px 30px;
+}
+
+header h1 {
+  font-size: 26px;
+}
+
+header p {
+  font-size: 14px;
+  margin-top: 4px;
+  opacity: 0.85;
+}
+
+/* ===========================
+   CONTEÚDO PRINCIPAL
+=========================== */
+main {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ===========================
+   FILTROS
+=========================== */
+.filtros {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filtros h2 {
+  font-size: 16px;
+  margin-bottom: 14px;
+  color: #5a2d82;
+}
+
+.filtros-linha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: flex-end;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.campo label {
+  font-size: 13px;
+  color: #555;
+}
+
+.campo select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  background-color: #fafafa;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+.campo select:focus {
+  outline: none;
+  border-color: #5a2d82;
+}
+
+#btnFiltrar {
+  padding: 9px 20px;
+  background-color: #5a2d82;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#btnFiltrar:hover {
+  background-color: #47236a;
+}
+
+#btnLimpar {
+  padding: 9px 16px;
+  background-color: white;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#btnLimpar:hover {
+  background-color: #f0f0f0;
+}
+
+/* ===========================
+   CARDS DE RESUMO
+=========================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid transparent;
+}
+
+.card.vermelho { border-top-color: #e74c3c; }
+.card.roxo     { border-top-color: #5a2d82; }
+.card.verde    { border-top-color: #27ae60; }
+.card.amarelo  { border-top-color: #f39c12; }
+
+.card-numero {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-texto {
+  font-size: 13px;
+  color: #777;
+  margin-top: 6px;
+}
+
+/* ===========================
+   GRÁFICOS
+=========================== */
+.graficos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.grafico-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grafico-box h3 {
+  font-size: 15px;
+  color: #5a2d82;
+  margin-bottom: 16px;
+}
+
+/* ===========================
+   TABELA
+=========================== */
+.tabela-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.tabela-box h3 {
+  font-size: 15px;
+  color: #5a2d82;
+  margin-bottom: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+thead th {
+  background-color: #f0ebf9;
+  color: #5a2d82;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #d8c8f0;
+}
+
+tbody td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background-color: #fafafa;
+}
+
+/* tags de tipo */
+.tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.tag-ameaca     { background-color: #fde8e7; color: #c0392b; }
+.tag-fisica     { background-color: #fef5e0; color: #b07800; }
+.tag-psicologica{ background-color: #f0ebf9; color: #5a2d82; }
+.tag-assedio    { background-color: #e8f5e9; color: #1e6e3e; }
+
+/* tags de status */
+.status {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status-pendente  { background-color: #fef5e0; color: #b07800; }
+.status-andamento { background-color: #f0ebf9; color: #5a2d82; }
+.status-resolvido { background-color: #e8f5e9; color: #1e6e3e; }
+
+/* ===========================
+   RODAPÉ
+=========================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  color: #999;
+  margin-top: 10px;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .graficos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
