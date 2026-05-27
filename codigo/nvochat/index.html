@@ -3,80 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Chat de Apoio </title>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Chat de Apoio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Fraunces:ital,wght@0,300;0,600;1,300&display=swap">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <div class="bg-orbs">
-        <div class="orb orb1"></div>
-        <div class="orb orb2"></div>
-        <div class="orb orb3"></div>
-     </div>
 
-    <div class="app">
-        <div class="screen" id="screen-intro">
-            <div class="intro-card">
-            
-                <h1>💜 Chat de Apoio</h1>
-                <p>Olá! Este é um chat seguro e anônimo para mulheres em situação de violência doméstica.</p>
+  <div class="bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
 
-                <p>Nenhum dado pessoal seu será salvo. Pode falar com a gente à vontade 💜</p>
+  <div class="app">
 
-                <button class="btn-start" onclick="iniciarApp()">Quero conversar</button>
+    
+    <div class="screen" id="screen-intro">
+      <div class="intro-card">
 
-                <button class="btn-ghost" onclick="abrirHistorico()">Ver histórico</button>
-               
+        <h1>💜 Chat de Apoio</h1>
+
+        <p>Olá! Este é um chat seguro e anônimo para mulheres em situação de violência doméstica.</p>
+
+        <p>Nenhum dado pessoal seu será salvo. Pode falar com a gente à vontade 💜</p>
+
+        <button class="btn-start" onclick="iniciarApp()">Quero conversar</button>
+
+        <button class="btn-ghost" onclick="abrirHistorico()">Ver histórico</button>
+
+      </div>
+    </div>
+
+    
+    <div class="screen hidden" id="screen-chat">
+      <article class="chat-container">
+
+        <header class="chat-header">
+          <div class="header-left">
+            <div class="avatar-bot">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <circle cx="16" cy="16" r="14" fill="url(#botGrad)"/>
+                <circle cx="11" cy="14" r="2" fill="white"/>
+                <circle cx="21" cy="14" r="2" fill="white"/>
+                <path d="M10 20c1.5 2 10.5 2 12 0" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <defs>
+                  <linearGradient id="botGrad" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#a855f7"/>
+                    <stop offset="1" stop-color="#6366f1"/>
+                  </linearGradient>
+                </defs>
+              </svg>
             </div>
-        </div>
-
-
-        <div class="screen hidden" id="screen-chat">
-            <article class="chat-container">
-
-                <header class="chat-header">
-                    <div class="header-left">
-                        <div class="avatar-bot">
-                            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                                <circle cx="16" cy="16" r="14" fill="url(#botGrad)"/>
-                                <circle cx="11" cy="14" r="2" fill="white"/>
-                                <circle cx="21" cy="14" r="2" fill="white"/>
-                                <path d="M10 20c1.5 2 10.5 2 12 0" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                                <defs>
-                                    <linearGradient id="botGrad" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#a855f7"/>
-                                        <stop offset="1" stop-color="#6366f1"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="header-name">💜 Chat de Apoio</span>
-                            <span class="header-status" id="statusBar">• Conectando...</span>
-                        </div>
-                    </div>
-                    <div class="header-actions">
-                        <button class="btn-icon" id="btnHistorico" title="Histórico">
-                             Histórico
-                        </button>
-                        <button class="btn-icon btn-danger" onclick="voltarIntro()" title="Sair">
-                            Sair
-                        </button>
-                    </div>
-                </header>
+            <div>
+              <span class="header-name">💜 Chat de Apoio</span>
+              <span class="header-status" id="statusBar">• Conectando...</span>
+            </div>
+          </div>
+          <div class="header-actions">
+            <button class="btn-icon" id="btnHistorico" title="Histórico">
+              Histórico
+            </button>
+            <button class="btn-icon btn-danger" onclick="voltarIntro()" title="Sair">
+              Sair
+            </button>
+          </div>
+        </header>
 
         <main class="chat-messages" id="chat">
-
+        
         </main>
-            
+
         <section class="opcoes-section hidden" id="opcoesSection">
-            <label class="opcao" id="opcao-sim" onclick="responder('Sim')">
-                <div class="caixinha"></div>
-                <div class="opcao-texto">
-                    <span class="nome-opcao">SIM!</span>
-                <span class="descricao-opcao">Você será direcionada para apoio de emergência</span>
+          <label class="opcao" id="opcao-sim" onclick="responder('Sim')">
+            <div class="caixinha"></div>
+            <div class="opcao-texto">
+              <span class="nome-opcao">SIM!</span>
+              <span class="descricao-opcao">Você será direcionada para apoio de emergência</span>
             </div>
           </label>
 
@@ -96,25 +99,27 @@
           </div>
         </footer>
 
-            </article>
+      </article>
+    </div>
+
+    <div class="screen hidden" id="screen-historico">
+      <div class="historico-container">
+        <div class="historico-header">
+          <button class="btn-back" onclick="fecharHistorico()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <path d="M19 12H5m0 0l7 7m-7-7l7-7"/>
+            </svg>
+            Voltar
+          </button>
+          <h2>Histórico de Sessões</h2>
+          <button class="btn-clear" onclick="limparHistorico()">Limpar</button>
         </div>
-        <div class="screen hidden" id="screen-historico">
-            <div class="historico-container">
-                <div class="historico-header">
-                    <button class="btn-back" onclick="fecharHistorico()">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-                             <path d="M19 12H5m0 0l7 7m-7-7l7-7"/>
-                        </svg>
-                        Voltar
-                    </button>
-                    <h2>Histórico de Sessões</h2>
-                    <button class="btn-clear" onclick="limparHistorico()">Limpar</button>
-                </div>
-                <div id="historicoDados"></div>
-            </div>
-        
-        </div>
-    
-    <script src="script.js"></script>
+        <div id="historicoDados"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
