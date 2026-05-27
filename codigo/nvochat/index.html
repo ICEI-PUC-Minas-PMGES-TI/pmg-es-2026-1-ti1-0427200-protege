@@ -71,7 +71,7 @@
 
         </main>
             
-        <section class="opcoes-section hidden" id="opcoesSection"
+        <section class="opcoes-section hidden" id="opcoesSection">
             <label class="opcao" id="opcao-sim" onclick="responder('Sim')">
                 <div class="caixinha"></div>
                 <div class="opcao-texto">
@@ -96,13 +96,25 @@
           </div>
         </footer>
 
-      </article>
-    </div>
-
-
-
+            </article>
+        </div>
+        <div class="screen hidden" id="screen-historico">
+            <div class="historico-container">
+                <div class="historico-header">
+                    <button class="btn-back" onclick="fecharHistorico()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                             <path d="M19 12H5m0 0l7 7m-7-7l7-7"/>
+                        </svg>
+                        Voltar
+                    </button>
+                    <h2>Histórico de Sessões</h2>
+                    <button class="btn-clear" onclick="limparHistorico()">Limpar</button>
+                </div>
+                <div id="historicoDados"></div>
+            </div>
+        
+        </div>
     
-
     <script src="script.js"></script>
 </body>
 </html>
