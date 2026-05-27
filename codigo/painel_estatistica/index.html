@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protege+ | Painel de Estatísticas</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Protege+</h1>
+    <p>Painel de Estatísticas</p>
+  </header>
+
+  <main>
+
+    <!-- FILTROS -->
+    <section class="filtros">
+      <h2>Filtros</h2>
+      <div class="filtros-linha">
+
+        <div class="campo">
+          <label for="filtroPeriodo">Período</label>
+          <select id="filtroPeriodo">
+            <option value="todos">Todos</option>
+            <option value="7">Últimos 7 dias</option>
+            <option value="30">Últimos 30 dias</option>
+            <option value="90">Últimos 3 meses</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="filtroTipo">Tipo de Violência</label>
+          <select id="filtroTipo">
+            <option value="todos">Todos</option>
+            <option value="ameaca">Ameaça</option>
+            <option value="fisica">Física</option>
+            <option value="psicologica">Psicológica</option>
+            <option value="assedio">Assédio</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="filtroStatus">Status</label>
+          <select id="filtroStatus">
+            <option value="todos">Todos</option>
+            <option value="pendente">Pendente</option>
+            <option value="andamento">Em Andamento</option>
+            <option value="resolvido">Resolvido</option>
+          </select>
+        </div>
+
+        <button id="btnFiltrar" onclick="aplicarFiltros()">Filtrar</button>
+        <button id="btnLimpar" onclick="limparFiltros()">Limpar</button>
+
+      </div>
+    </section>
+
+    <!-- CARDS DE RESUMO -->
+    <section class="cards">
+      <div class="card vermelho">
+        <p class="card-numero" id="totalDenuncias">247</p>
+        <p class="card-texto">Total de Denúncias</p>
+      </div>
+      <div class="card roxo">
+        <p class="card-numero" id="totalPendentes">58</p>
+        <p class="card-texto">Casos Pendentes</p>
+      </div>
+      <div class="card verde">
+        <p class="card-numero" id="totalResolvidos">139</p>
+        <p class="card-texto">Casos Resolvidos</p>
+      </div>
+      <div class="card amarelo">
+        <p class="card-numero" id="totalUsuarias">183</p>
+        <p class="card-texto">Usuárias Cadastradas</p>
+      </div>
+    </section>
+
+    <!-- GRÁFICOS -->
+    <section class="graficos">
+
+      <div class="grafico-box">
+        <h3>Denúncias por Mês</h3>
+        <canvas id="graficoMeses"></canvas>
+      </div>
+
+      <div class="grafico-box">
+        <h3>Tipos de Violência</h3>
+        <canvas id="graficoTipos"></canvas>
+      </div>
+
+      <div class="grafico-box">
+        <h3>Status dos Casos</h3>
+        <canvas id="graficoStatus"></canvas>
+      </div>
+
+      <div class="grafico-box">
+        <h3>Denúncias por Bairro</h3>
+        <canvas id="graficoBairros"></canvas>
+      </div>
+
+    </section>
+
+    <!-- TABELA DE DENÚNCIAS RECENTES -->
+    <section class="tabela-box">
+      <h3>Denúncias Recentes</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Data</th>
+            <th>Bairro</th>
+            <th>Tipo</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="corpoTabela">
+          <!-- preenchido pelo JavaScript -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Protege+ &mdash; T1-G3 &mdash; Trabalho Interdisciplinar 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
