@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Protege+ | Painel de Estatísticas</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </head>
+
 <body>
 
   <header>
@@ -16,7 +17,6 @@
 
   <main>
 
-    <!-- FILTROS -->
     <section class="filtros">
       <h2>Filtros</h2>
       <div class="filtros-linha">
@@ -52,58 +52,36 @@
           </select>
         </div>
 
-        <button id="btnFiltrar" onclick="aplicarFiltros()">Filtrar</button>
-        <button id="btnLimpar" onclick="limparFiltros()">Limpar</button>
+        <button>Filtrar</button>
+        <button class="btn-limpar">Limpar</button>
 
       </div>
     </section>
 
-    <!-- CARDS DE RESUMO -->
     <section class="cards">
+
       <div class="card vermelho">
-        <p class="card-numero" id="totalDenuncias">247</p>
+        <p class="card-numero">247</p>
         <p class="card-texto">Total de Denúncias</p>
       </div>
+
       <div class="card roxo">
-        <p class="card-numero" id="totalPendentes">58</p>
+        <p class="card-numero">58</p>
         <p class="card-texto">Casos Pendentes</p>
       </div>
+
       <div class="card verde">
-        <p class="card-numero" id="totalResolvidos">139</p>
+        <p class="card-numero">139</p>
         <p class="card-texto">Casos Resolvidos</p>
       </div>
+
       <div class="card amarelo">
-        <p class="card-numero" id="totalUsuarias">183</p>
+        <p class="card-numero">183</p>
         <p class="card-texto">Usuárias Cadastradas</p>
       </div>
-    </section>
-
-    <!-- GRÁFICOS -->
-    <section class="graficos">
-
-      <div class="grafico-box">
-        <h3>Denúncias por Mês</h3>
-        <canvas id="graficoMeses"></canvas>
-      </div>
-
-      <div class="grafico-box">
-        <h3>Tipos de Violência</h3>
-        <canvas id="graficoTipos"></canvas>
-      </div>
-
-      <div class="grafico-box">
-        <h3>Status dos Casos</h3>
-        <canvas id="graficoStatus"></canvas>
-      </div>
-
-      <div class="grafico-box">
-        <h3>Denúncias por Bairro</h3>
-        <canvas id="graficoBairros"></canvas>
-      </div>
 
     </section>
 
-    <!-- TABELA DE DENÚNCIAS RECENTES -->
     <section class="tabela-box">
       <h3>Denúncias Recentes</h3>
       <table>
@@ -116,19 +94,69 @@
             <th>Status</th>
           </tr>
         </thead>
-        <tbody id="corpoTabela">
-          <!-- preenchido pelo JavaScript -->
+        <tbody>
+          <tr>
+            <td>den_001</td>
+            <td>25/04/2026</td>
+            <td>Braúnas</td>
+            <td><span class="tag tag-ameaca">Ameaça</span></td>
+            <td><span class="status status-pendente">Pendente</span></td>
+          </tr>
+          <tr>
+            <td>den_002</td>
+            <td>25/04/2026</td>
+            <td>Ouro Preto</td>
+            <td><span class="tag tag-fisica">Física</span></td>
+            <td><span class="status status-resolvido">Resolvido</span></td>
+          </tr>
+          <tr>
+            <td>den_003</td>
+            <td>26/04/2026</td>
+            <td>Contagem</td>
+            <td><span class="tag tag-psicologica">Psicológica</span></td>
+            <td><span class="status status-andamento">Em Andamento</span></td>
+          </tr>
+          <tr>
+            <td>den_004</td>
+            <td>26/04/2026</td>
+            <td>Barreiro</td>
+            <td><span class="tag tag-assedio">Assédio</span></td>
+            <td><span class="status status-resolvido">Resolvido</span></td>
+          </tr>
+          <tr>
+            <td>den_005</td>
+            <td>27/04/2026</td>
+            <td>Venda Nova</td>
+            <td><span class="tag tag-ameaca">Ameaça</span></td>
+            <td><span class="status status-pendente">Pendente</span></td>
+          </tr>
+          <tr>
+            <td>den_006</td>
+            <td>27/04/2026</td>
+            <td>Centro</td>
+            <td><span class="tag tag-fisica">Física</span></td>
+            <td><span class="status status-andamento">Em Andamento</span></td>
+          </tr>
+          <tr>
+            <td>den_007</td>
+            <td>28/04/2026</td>
+            <td>Braúnas</td>
+            <td><span class="tag tag-psicologica">Psicológica</span></td>
+            <td><span class="status status-resolvido">Resolvido</span></td>
+          </tr>
+          <tr>
+            <td>den_008</td>
+            <td>29/04/2026</td>
+            <td>Contagem</td>
+            <td><span class="tag tag-ameaca">Ameaça</span></td>
+            <td><span class="status status-resolvido">Resolvido</span></td>
+          </tr>
         </tbody>
       </table>
     </section>
 
   </main>
 
-  <footer>
-    <p>Protege+ &mdash; T1-G3 &mdash; Trabalho Interdisciplinar 2026</p>
-  </footer>
-
-  <script src="script.js"></script>
-
 </body>
+
 </html>
