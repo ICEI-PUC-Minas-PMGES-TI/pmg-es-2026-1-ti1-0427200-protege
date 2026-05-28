@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refúgio + — Contatos Cadastrados</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="barra-nav">
+      <a href="cadastro.html" class="logo-nav">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          />
+        </svg>
+        Refúgio +
+      </a>
+      <div class="links-nav">
+        <a href="cadastro.html">Cadastrar contato</a>
+        <a href="listagem.html" class="ativo">Ver cadastros</a>
+      </div>
+    </nav>
+
+    <div class="layout">
+      <!-- MENU LATERAL -->
+      <aside class="menu-lateral">
+        <div class="titulo-secao-menu">Menu</div>
+        <a href="cadastro.html" class="item-menu">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </a>
+        <a href="listagem.html" class="item-menu ativo">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="8" y1="6" x2="21" y2="6" />
+            <line x1="8" y1="12" x2="21" y2="12" />
+            <line x1="8" y1="18" x2="21" y2="18" />
+            <line x1="3" y1="6" x2="3.01" y2="6" />
+            <line x1="3" y1="12" x2="3.01" y2="12" />
+            <line x1="3" y1="18" x2="3.01" y2="18" />
+          </svg>
+          Ver cadastros
+        </a>
+      </aside>
+
+      <main class="conteudo-principal">
+        <div class="cabecalho-com-botao">
+          <div class="cabecalho-pagina" style="margin-bottom: 0">
+            <h1>Contatos cadastrados</h1>
+            <p>Visualize, busque e gerencie seus contatos de confiança</p>
+          </div>
+          <a href="cadastro.html" class="botao botao-primario">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              style="width: 15px; height: 15px"
+            >
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+            Novo contato
+          </a>
+        </div>
+
+        <div class="barra-ferramentas" style="margin-top: 22px">
+          <div class="campo-busca-wrap">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input
+              id="campoBusca"
+              type="text"
+              class="campo-input"
+              placeholder="Buscar por nome ou e-mail…"
+              autocomplete="off"
+            />
+          </div>
+          <button class="botao-filtro ativo-todos" data-filtro="todos">
+            Todos
+          </button>
+          <button class="botao-filtro" data-filtro="Familiar">
+            👨‍👩‍👧 Familiar
+          </button>
+          <button class="botao-filtro" data-filtro="Amigos">👥 Amigos</button>
+          <button class="botao-filtro" data-filtro="Conhecidos">
+            🤝 Conhecidos
+          </button>
+        </div>
+
+        <div id="listaContatos" class="lista-contatos"></div>
+        <p id="totalContatos" class="total-contatos"></p>
+      </main>
+    </div>
+
+    <div
+      class="fundo-modal"
+      id="modalConfirmacao"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="tituloModal"
+    >
+      <div class="janela-modal">
+        <h3 id="tituloModal">Excluir contato</h3>
+        <p id="mensagemModal"></p>
+        <div class="linha-botoes">
+          <button id="botaoCancelarExclusao" class="botao botao-contorno">
+            Cancelar
+          </button>
+          <button id="botaoConfirmarExclusao" class="botao botao-perigo">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="width: 15px; height: 15px"
+            >
+              <polyline points="3 6 5 6 21 6" />
+              <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+              <path d="M10 11v6" />
+              <path d="M14 11v6" />
+              <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+            </svg>
+            Excluir
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notificação flutuante (utilizei IA) -->
+    <div id="toast"></div>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/listagem.js"></script>
+  </body>
+</html>

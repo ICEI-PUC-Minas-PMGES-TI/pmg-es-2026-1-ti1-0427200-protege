@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refúgio + — Cadastrar Contato</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <nav class="barra-nav">
+      <a href="cadastro.html" class="logo-nav">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          />
+        </svg>
+        Refúgio +
+      </a>
+      <div class="links-nav">
+        <a href="cadastro.html" class="ativo">Cadastrar contato</a>
+        <a href="listagem.html">Ver cadastros</a>
+      </div>
+    </nav>
+
+    <!-- LAYOUT -->
+    <div class="layout">
+      <!-- MENU LATERAL -->
+      <aside class="menu-lateral">
+        <div class="titulo-secao-menu">Menu</div>
+        <a href="cadastro.html" class="item-menu ativo">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+          Cadastrar contato
+        </a>
+        <a href="listagem.html" class="item-menu">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="8" y1="6" x2="21" y2="6" />
+            <line x1="8" y1="12" x2="21" y2="12" />
+            <line x1="8" y1="18" x2="21" y2="18" />
+            <line x1="3" y1="6" x2="3.01" y2="6" />
+            <line x1="3" y1="12" x2="3.01" y2="12" />
+            <line x1="3" y1="18" x2="3.01" y2="18" />
+          </svg>
+          Ver cadastros
+        </a>
+      </aside>
+
+      <!-- CONTEÚDO PRINCIPAL -->
+      <main class="conteudo-principal">
+        <div class="cabecalho-pagina">
+          <h1>Cadastrar contato de confiança</h1>
+          <p>
+            Preencha os dados da pessoa que você deseja registrar como contato
+            de confiança
+          </p>
+        </div>
+
+        <div class="cartao">
+          <form id="formularioCadastro" novalidate>
+            <div class="grade-formulario">
+              <!-- Nome completo -->
+              <div class="grupo-campo linha-inteira">
+                <label class="rotulo-campo" for="nome">
+                  Nome completo <span class="obrigatorio">*</span>
+                </label>
+                <input
+                  id="nome"
+                  type="text"
+                  class="campo-input"
+                  placeholder="Ex: Maria da Silva Santos"
+                  autocomplete="name"
+                />
+                <span class="erro-campo" id="erroNome"
+                  >Por favor, insira um nome com pelo menos 3 caracteres.</span
+                >
+              </div>
+
+              <!-- E-mail -->
+              <div class="grupo-campo">
+                <label class="rotulo-campo" for="email">
+                  E-mail <span class="obrigatorio">*</span>
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  class="campo-input"
+                  placeholder="exemplo@email.com"
+                  autocomplete="email"
+                />
+                <span class="erro-campo" id="erroEmail"
+                  >Insira um e-mail válido.</span
+                >
+              </div>
+
+              <!-- Telefone -->
+              <div class="grupo-campo">
+                <label class="rotulo-campo" for="telefone">
+                  Número de telefone <span class="obrigatorio">*</span>
+                </label>
+                <input
+                  id="telefone"
+                  type="tel"
+                  class="campo-input"
+                  placeholder="(00) 00000-0000"
+                  maxlength="15"
+                  autocomplete="tel"
+                />
+                <span class="erro-campo" id="erroTelefone"
+                  >Insira um telefone válido com DDD.</span
+                >
+              </div>
+
+              <!-- Nível de parentesco -->
+              <div class="grupo-campo linha-inteira" id="grupoNivel">
+                <label class="rotulo-campo">
+                  Nível de parentesco <span class="obrigatorio">*</span>
+                </label>
+                <div class="grupo-nivel">
+                  <button
+                    type="button"
+                    class="botao-nivel"
+                    data-nivel="Familiar"
+                  >
+                    👨‍👩‍👧 Familiar
+                  </button>
+                  <button type="button" class="botao-nivel" data-nivel="Amigos">
+                    👥 Amigos
+                  </button>
+                  <button
+                    type="button"
+                    class="botao-nivel"
+                    data-nivel="Conhecidos"
+                  >
+                    🤝 Conhecidos
+                  </button>
+                </div>
+                <span class="dica-campo"
+                  >Selecione o tipo de vínculo com este contato</span
+                >
+                <span class="erro-campo" id="erroNivel"
+                  >Selecione o nível de parentesco.</span
+                >
+              </div>
+            </div>
+            <!-- /grade-formulario -->
+
+            <hr class="divisor" />
+
+            <div class="linha-botoes">
+              <button
+                type="button"
+                id="botaoCancelar"
+                class="botao botao-contorno"
+              >
+                Cancelar
+              </button>
+              <button type="submit" class="botao botao-primario">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  style="width: 15px; height: 15px"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Salvar contato
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- /cartao -->
+      </main>
+    </div>
+
+    <!-- Notificação flutuante (utiolizei IA) -->
+    <div id="toast"></div>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/cadastro.js"></script>
+  </body>
+</html>
