@@ -10,3 +10,16 @@ fetch("../db/db.json")
     document.getElementById("listaProvas").innerHTML =
       "<p style='color:red'>Erro ao carregar as provas.</p>";
   });
+
+function renderCards(provas) {
+  const lista = document.getElementById("listaProvas");
+  lista.innerHTML = provas.map(p => `
+    <div class="card">
+      <span class="card-tipo tipo-${p.tipo}">${tipoLabel[p.tipo]}</span>
+      <h3>${p.titulo}</h3>
+      <p>${p.descricao.substring(0, 80)}...</p>
+      <span class="card-data">📅 ${p.data}</span>
+      <button class="btn-detalhes" onclick="verDetalhes(${p.id})">Ver detalhes</button>
+    </div>
+  `).join("");
+}
