@@ -24,48 +24,85 @@
   ],
   "arquivos": [],
   "provas": [
-    {
-      "id": 1,
-      "titulo": "Fotos de hematomas", 
-      "descricao": "Imagens após agressão física.",
-      "tipo": "Imagem",
-      "data": "12/05/2026",
-      "hora": "21:15",
-      "arquivo": "https://images.unsplash.com/photo-1517841905240-472988babdf9",
-      "arquivoTipo": "imagem"
-    },
-
-    {
-      "id": 2,
-      "titulo": "Áudio de ameaça",
-      "descricao": "Gravação de ameaça verbal.",
-      "tipo": "Áudio",
-      "data": "10/05/2026",
-      "hora": "23:40",
-      "arquivo": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-      "arquivoTipo": "audio"
-    },
-
-    {
-      "id": 3,
-      "titulo": "Vídeo da discussão",
-      "descricao": "Registro em vídeo.",
-      "tipo": "Vídeo",
-      "data": "08/05/2026",
-      "hora": "19:30",
-      "arquivo": "https://www.w3schools.com/html/mov_bbb.mp4",
-      "arquivoTipo": "video"
-    },
-
-    {
-      "id": 4,
-      "titulo": "Boletim de ocorrência",
-      "descricao": "PDF do boletim.",
-      "tipo": "PDF",
-      "data": "05/05/2026",
-      "hora": "14:20",
-      "arquivo": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-      "arquivoTipo": "pdf"
-    }
-  ]
+  {
+    "id": 1,
+    "titulo": "Áudio de ameaça — 14/03/2024",
+    "tipo": "audio",
+    "data": "14/03/2024",
+    "descricao": "Gravação de áudio capturada durante ligação telefônica onde o agressor profere ameaças diretas à vítima, incluindo ameaças de morte e perseguição caso ela tente se separar.",
+    "arquivo": "ameaca_14mar.mp3",
+    "tamanho": "2,3 MB",
+    "duracao": "1min 42s"
+  },
+  {
+    "id": 2,
+    "titulo": "Foto — Lesões corporais",
+    "tipo": "foto",
+    "data": "10/03/2024",
+    "descricao": "Fotografias tiradas na UPA evidenciando hematomas no braço esquerdo e pescoço da vítima, registradas e laudadas pelo médico plantonista no momento do atendimento.",
+    "arquivo": "lesoes_10mar.jpg",
+    "tamanho": "4,1 MB",
+    "duracao": null
+  },
+  {
+    "id": 3,
+    "titulo": "Vídeo — Câmera de segurança",
+    "tipo": "video",
+    "data": "08/03/2024",
+    "descricao": "Trecho de 3 minutos da câmera de segurança do condomínio mostrando o agressor na entrada do prédio aguardando a vítima de forma intimidatória, desrespeitando a medida protetiva vigente.",
+    "arquivo": "cam_seg_08mar.mp4",
+    "tamanho": "18,7 MB",
+    "duracao": "3min 04s"
+  },
+  {
+    "id": 4,
+    "titulo": "Capturas de tela — Mensagens WhatsApp",
+    "tipo": "documento",
+    "data": "12/03/2024",
+    "descricao": "Prints das conversas via WhatsApp contendo mensagens de ameaça, controle e intimidação enviadas pelo agressor entre os dias 10 e 12 de março de 2024.",
+    "arquivo": "prints_whatsapp.pdf",
+    "tamanho": "890 KB",
+    "duracao": null
+  },
+  {
+    "id": 5,
+    "titulo": "Boletim de Ocorrência",
+    "tipo": "documento",
+    "data": "15/03/2024",
+    "descricao": "Cópia do Boletim de Ocorrência registrado na Delegacia da Mulher contendo relato detalhado dos fatos, identificação do agressor e assinatura da autoridade policial.",
+    "arquivo": "bo_15mar.pdf",
+    "tamanho": "310 KB",
+    "duracao": null
+  },
+  {
+    "id": 6,
+    "titulo": "Áudio — Discussão com testemunha presente",
+    "tipo": "audio",
+    "data": "02/03/2024",
+    "descricao": "Gravação feita pela vizinha do apartamento que flagrou, através da parede, uma discussão violenta com gritos e sons de objetos sendo arremessados pelo agressor.",
+    "arquivo": "testemunha_02mar.mp3",
+    "tamanho": "5,6 MB",
+    "duracao": "4min 17s"
+  },
+  {
+    "id": 7,
+    "titulo": "Vídeo — Perseguição na rua",
+    "tipo": "video",
+    "data": "18/03/2024",
+    "descricao": "Vídeo gravado pela própria vítima com o celular mostrando o agressor a seguindo a pé após ela sair do trabalho, aproximando-se de forma ameaçadora e proferindo insultos.",
+    "arquivo": "perseguicao_18mar.mp4",
+    "tamanho": "31,2 MB",
+    "duracao": "5min 58s"
+  },
+  {
+    "id": 8,
+    "titulo": "Foto — Danos materiais no apartamento",
+    "tipo": "foto",
+    "data": "06/03/2024",
+    "descricao": "Registros fotográficos do apartamento da vítima após episódio de violência, documentando porta arrombada, espelho quebrado e objetos destruídos pelo agressor.",
+    "arquivo": "danos_apartamento_06mar.jpg",
+    "tamanho": "7,8 MB",
+    "duracao": null
+  }
+]
 }
