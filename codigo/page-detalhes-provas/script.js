@@ -23,3 +23,27 @@ function renderCards(provas) {
     </div>
   `).join("");
 }
+
+function verDetalhes(id) {
+  window.location.href = `detalhes.html?id=${id}`;
+}
+
+function abrirModal(id) {
+  const p = window.provasCache.find(x => x.id === id);
+  if (!p) return;
+  document.getElementById("detalhesProva").innerHTML = `
+    <span class="detalhe-tipo tipo-${p.tipo}">${tipoLabel[p.tipo]}</span>
+    <p class="detalhe-titulo">${p.titulo}</p>
+    <p class="detalhe-desc">${p.descricao}</p>
+    <div class="detalhe-info">
+      <div class="detalhe-linha"><span class="detalhe-label">Data:</span> ${p.data}</div>
+      <div class="detalhe-linha"><span class="detalhe-label">Arquivo:</span>
+        <a class="detalhe-arquivo" href="#">${p.arquivo}</a>
+      </div>
+      <div class="detalhe-linha"><span class="detalhe-label">Tamanho:</span> ${p.tamanho}</div>
+      ${p.duracao ? `<div class="detalhe-linha"><span class="detalhe-label">Duração:</span> ${p.duracao}</div>` : ""}
+    </div>
+  `;
+  document.getElementById("modal").classList.add("ativo");
+}
+
