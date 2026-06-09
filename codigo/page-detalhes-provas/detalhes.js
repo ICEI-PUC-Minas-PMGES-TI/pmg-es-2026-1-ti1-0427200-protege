@@ -19,3 +19,29 @@ fetch("../db/db.json")
     document.getElementById("conteudoDetalhe").innerHTML =
       "<p style='color:red'>Erro ao carregar os dados.</p>";
   });
+function renderDetalhe(p) {
+  document.getElementById("conteudoDetalhe").innerHTML = `
+    <div class="card-detalhe">
+      <span class="card-tipo tipo-${p.tipo}">${tipoLabel[p.tipo]}</span>
+      <h2>${p.titulo}</h2>
+      <p class="detalhe-desc">${p.descricao}</p>
+      <div class="detalhe-info">
+        <div class="detalhe-linha">
+          <span class="detalhe-label">Data:</span> ${p.data}
+        </div>
+        <div class="detalhe-linha">
+          <span class="detalhe-label">Arquivo:</span>
+          <a class="detalhe-arquivo" href="#">${p.arquivo}</a>
+        </div>
+        <div class="detalhe-linha">
+          <span class="detalhe-label">Tamanho:</span> ${p.tamanho}
+        </div>
+        ${p.duracao ? `
+        <div class="detalhe-linha">
+          <span class="detalhe-label">Duração:</span> ${p.duracao}
+        </div>` : ""}
+      </div>
+      <button class="btn-voltar" onclick="window.location.href='index.html'">← Voltar</button>
+    </div>
+  `;
+}
