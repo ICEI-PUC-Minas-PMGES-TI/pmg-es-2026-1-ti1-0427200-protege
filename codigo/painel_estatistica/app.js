@@ -8,3 +8,41 @@ var denuncias = [
   { id: "den_007", data: "28/04/2026", bairro: "Braúnas",    tipo: "psicologica", status: "resolvido" },
   { id: "den_008", data: "29/04/2026", bairro: "Contagem",   tipo: "ameaca",     status: "resolvido" }
 ];
+
+var nomesTipo = {
+  ameaca:      "Ameaça",
+  fisica:      "Física",
+  psicologica: "Psicológica",
+  assedio:     "Assédio"
+};
+
+var nomesStatus = {
+  pendente:  "Pendente",
+  andamento: "Em Andamento",
+  resolvido: "Resolvido"
+};
+
+function filtrarDenuncias() {
+  var periodo = document.getElementById("filtroPeriodo").value;
+  var tipo    = document.getElementById("filtroTipo").value;
+  var status  = document.getElementById("filtroStatus").value;
+
+  var resultado = [];
+
+  for (var i = 0; i < denuncias.length; i++) {
+    var d = denuncias[i];
+
+    if (tipo !== "todos" && d.tipo !== tipo) {
+      continue;
+    }
+
+    if (status !== "todos" && d.status !== status) {
+      continue;
+    }
+
+    resultado.push(d);
+  }
+
+  return resultado;
+}
+
