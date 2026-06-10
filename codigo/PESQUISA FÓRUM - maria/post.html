@@ -11,7 +11,13 @@
 
 <body>
 
+    <body>
+
     <div class="container">
+
+        <button class="voltar" onclick="history.back()">
+            ← Voltar para Pesquisa
+        </button>
 
         <div id="post-container"></div>
 
@@ -19,23 +25,24 @@
 
             <h2>Respostas</h2>
 
-            <div id="lista-comentarios">
+            <div id="lista-comentarios"></div>
 
-                <div class="comentario">
-                    Procure apoio psicológico e converse com pessoas de confiança.
-                </div>
+            <textarea
+                id="novaResposta"
+                placeholder="Digite sua resposta..."
+            ></textarea>
 
-                <div class="comentario">
-                    Você não está sozinha. Existem canais especializados para ajudar.
-                </div>
-
-            </div>
+            <button class="btn-responder">
+                Responder
+            </button>
 
         </div>
 
     </div>
 
     <script src="post.js"></script>
+
+</body>
 
 </body>
 </html>
