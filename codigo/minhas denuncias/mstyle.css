@@ -154,6 +154,20 @@ body{
   font-size: 13px;
   color: #888;
 }
+.btn-detalhes{
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #7b4cc7;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-detalhes:hover{
+  background: #6337aa;
+}
 
 @media(max-width: 700px){
 
