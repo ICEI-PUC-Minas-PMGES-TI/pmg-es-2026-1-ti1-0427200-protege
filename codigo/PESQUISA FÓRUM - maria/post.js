@@ -1,48 +1,62 @@
-const parametros =
-new URLSearchParams(
-window.location.search
+const parametros = new URLSearchParams(
+    window.location.search
 );
 
-const id =
-parametros.get("id");
+const id = parametros.get("id");
 
+const posts = [
 
+    {
+        id: "1",
+        categoria: "Denúncia",
+        titulo: "Tenho medo de denunciar meu parceiro",
+        descricao:
+            "Ele me ameaça constantemente e tenho medo das consequências caso eu denuncie."
+    },
 
-async function carregarPost(){
+    {
+        id: "2",
+        categoria: "Ameaça",
+        titulo: "Estou recebendo ameaças",
+        descricao:
+            "Meu ex está me perseguindo pelas redes sociais e enviando mensagens agressivas."
+    },
 
-    const resposta =
-    await fetch(
-    `http://localhost:3000/posts/${id}`
-    );
+    {
+        id: "3",
+        categoria: "Ajuda psicológica",
+        titulo: "Preciso de ajuda psicológica",
+        descricao:
+            "Estou emocionalmente esgotada e preciso de orientação."
+    }
 
-    const post =
-    await resposta.json();
+];
 
+const post = posts.find(
+    p => p.id === id
+);
 
-    document
-    .getElementById("post-container")
-    .innerHTML = `
+if(post){
 
-    <div class="post">
+    document.getElementById(
+        "post-container"
+    ).innerHTML = `
 
-    <span class="categoria">
-        ${post.categoria}
-    </span>
+        <div class="post">
 
-    <h1>
-        ${post.titulo}
-    </h1>
+            <span class="categoria">
+                ${post.categoria}
+            </span>
 
-    <p>
-        ${post.descricao}
-    </p>
+            <h1>
+                ${post.titulo}
+            </h1>
 
-    </div>
+            <p>
+                ${post.descricao}
+            </p>
+
+        </div>
 
     `;
-
 }
-
-
-
-carregarPost();

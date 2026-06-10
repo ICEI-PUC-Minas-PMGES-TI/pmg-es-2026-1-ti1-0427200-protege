@@ -95,7 +95,9 @@ function mostrarPosts(listaPosts){
           ${post.respostas || 0} respostas
         </div>
 
-        <button class="ver-mais">
+        <button
+          class="ver-mais"
+          onclick="abrirPost(${post.id})">
           Ver discussão
         </button>
 
@@ -151,3 +153,10 @@ function filtrarCategoria(categoria){
 }
 
 mostrarPosts(posts);
+
+function abrirPost(id){
+
+    window.location.href =
+    `post.html?id=${id}`;
+
+}
