@@ -106,3 +106,60 @@ function mostrarDigitando() {
   chatEl.appendChild(wrapper);
   chatEl.scrollTop = chatEl.scrollHeight;
 }
+
+
+
+
+
+
+function abrirHistorico() {
+  mostrarTela("screen-historico");
+  renderizarHistorico();
+}
+
+function fecharHistorico() {
+  mostrarTela("screen-intro");
+}
+
+function limparHistorico() {
+  if (confirm("Tem certeza? Todos os dados serão apagados.")) {
+    localStorage.removeItem("sessoes_apoio");
+    renderizarHistorico();
+  }
+}
+
+function renderizarHistorico() {
+  const container = document.getElementById("historicoDados");
+  const sessoes = carregarSessoes();
+
+  if (sessoes.length === 0) {
+    container.innerHTML = `<div class="empty-state">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#d1d5db" stroke-width="2" width="48" height="48">
+        <path d="M12 6h24a2 2 0 012 2v32a2 2 0 01-2 2H12a2 2 0 01-2-2V8a2 2 0 012-2z"/>
+        <path d="M16 16h16M16 22h16M16 28h10"/>
+      </svg>
+      <p>Nenhuma sessão registrada ainda.</p>
+    </div>`;
+    return;
+  }
+
+  container.innerHTML = [...sessoes].reverse().map(s => {
+    const nivel = s.nivel_risco || "baixo";
+    const textoNivel = { alto: "Alto Risco", medio: "Risco Moderado", baixo: "Baixo Risco" }[nivel];
+    const pergs = (s.respostas || []).map(r =>
+      `<div class="sessao-pergunta">
+        <span class="perg-text">${r.pergunta}</span>
+        <span class="perg-resp">${r.resposta}</span>
+      </div>`
+    ).join("");
+
+    return `<div class="sessao-card">
+      <div class="sessao-header">
+        <span class="sessao-titulo">Sessão #${String(s.id).slice(-4)}</span>
+        <span class="sessao-risco ${nivel}">${textoNivel}</span>
+      </div>
+      <div class="sessao-data">📅 ${s.data} • Modo: ${s.modo === "ia" ? "IA Gemini" : "offline"}</div>
+      <div style="margin-top:10px">${pergs}</div>
+    </div>`;
+  }).join("");
+}
