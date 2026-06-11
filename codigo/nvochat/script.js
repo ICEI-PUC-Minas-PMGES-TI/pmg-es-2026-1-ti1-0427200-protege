@@ -163,3 +163,15 @@ function renderizarHistorico() {
     </div>`;
   }).join("");
 }
+
+
+
+function reiniciarConversa() {
+  chatEl.innerHTML = "";
+  const inputArea = document.getElementById("inputArea");
+  inputArea.innerHTML = `<div class="btn-row" id="btnRow">
+    <button class="btn-sim" onclick="responder('Sim')">SIM</button>
+    <button class="btn-nao" onclick="responder('Não')">NÃO</button>
+  </div>`;
+  iniciarChat();
+}
