@@ -1,102 +1,187 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     background: #f3eef7;
     min-height: 100vh;
     padding: 30px;
 }
 
-header{
+header {
     text-align: center;
     margin-bottom: 40px;
 }
 
-header h1{
+header h1 {
     color: #304ffe;
     margin-bottom: 10px;
 }
 
-header p{
+header p {
     color: #555;
 }
 
-#listaProvas{
-    display: grid;
-    grid-template-columns:
-    repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-
-.card {
-  background: #fff;
-  border-radius: 12px;
-  border: 0.5px solid #ddd;
-  padding: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.card-tipo {
-  font-size: 11px;
-  font-weight: 500;
-  padding: 3px 10px;
-  border-radius: 20px;
-  width: fit-content;
-}
-
-.tipo-audio    { background: #e3f2fd; color: #0d47a1; }
-.tipo-foto     { background: #e8f5e9; color: #1b5e20; }
-.tipo-video    { background: #fce4ec; color: #880e4f; }
-.tipo-documento{ background: #fff8e1; color: #e65100; }
-
-.card h3 { font-size: 15px; font-weight: 500; color: #1a1a2e; }
-.card p  { font-size: 13px; color: #555; line-height: 1.5; }
-.card-data { font-size: 12px; color: #888; }
-
-.btn-detalhes {
-  margin-top: auto;
-  background: #304ffe;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 13px;
-  cursor: pointer;
-}
-.btn-detalhes:hover { background: #1a36cc; }
+/* ===== INDEX ===== */
 
 #filtros {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .btn-filtro {
-  background: #fff;
-  color: #304ffe;
-  border: 1px solid #304ffe;
-  border-radius: 20px;
-  padding: 6px 18px;
-  font-size: 13px;
-  cursor: pointer;
-  transition: all 0.2s;
+    background: #fff;
+    color: #304ffe;
+    border: 1px solid #304ffe;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
 .btn-filtro:hover {
-  background: #304ffe;
-  color: #fff;
+    background: #304ffe;
+    color: #fff;
 }
 
 .btn-filtro.ativo {
-  background: #304ffe;
-  color: #fff;
+    background: #304ffe;
+    color: #fff;
+}
+
+#listaProvas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    border: 0.5px solid #ddd;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-tipo {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.tipo-audio     { background: #e3f2fd; color: #0d47a1; }
+.tipo-foto      { background: #e8f5e9; color: #1b5e20; }
+.tipo-video     { background: #fce4ec; color: #880e4f; }
+.tipo-documento { background: #fff8e1; color: #e65100; }
+
+.card h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a2e;
+}
+
+.card p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.card-data {
+    font-size: 12px;
+    color: #888;
+}
+
+.btn-detalhes {
+    margin-top: auto;
+    background: #304ffe;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-detalhes:hover {
+    background: #1a36cc;
+}
+
+/* ===== DETALHES ===== */
+
+.card-detalhe {
+    background: #fff;
+    border-radius: 12px;
+    border: 0.5px solid #ddd;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.card-detalhe h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1a1a2e;
+}
+
+.detalhe-desc {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.detalhe-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 0.5px solid #eee;
+    padding-top: 12px;
+}
+
+.detalhe-linha {
+    font-size: 13px;
+    color: #555;
+    display: flex;
+    gap: 6px;
+}
+
+.detalhe-label {
+    color: #888;
+    min-width: 70px;
+}
+
+.detalhe-arquivo {
+    color: #304ffe;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-voltar {
+    margin-top: 10px;
+    background: transparent;
+    color: #304ffe;
+    border: 1px solid #304ffe;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.btn-voltar:hover {
+    background: #304ffe;
+    color: #fff;
 }
