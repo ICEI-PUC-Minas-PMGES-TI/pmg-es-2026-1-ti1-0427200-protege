@@ -71,3 +71,32 @@ header p{
   cursor: pointer;
 }
 .btn-detalhes:hover { background: #1a36cc; }
+
+#filtros {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.btn-filtro {
+  background: #fff;
+  color: #304ffe;
+  border: 1px solid #304ffe;
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-filtro:hover {
+  background: #304ffe;
+  color: #fff;
+}
+
+.btn-filtro.ativo {
+  background: #304ffe;
+  color: #fff;
+}

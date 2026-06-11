@@ -3,6 +3,7 @@ const tipoLabel = { audio: "Áudio", foto: "Foto", video: "Vídeo", documento: "
 fetch("../db/db.json")
   .then(res => res.json())
   .then(data => {
+    window.provasCache = data.provas;
     renderCards(data.provas);
   })
   .catch(err => {
@@ -13,6 +14,12 @@ fetch("../db/db.json")
 
 function renderCards(provas) {
   const lista = document.getElementById("listaProvas");
+
+  if (provas.length === 0) {
+    lista.innerHTML = "<p style='color:#888; text-align:center; grid-column: 1/-1;'>Nenhuma prova encontrada.</p>";
+    return;
+  }
+
   lista.innerHTML = provas.map(p => `
     <div class="card">
       <span class="card-tipo tipo-${p.tipo}">${tipoLabel[p.tipo]}</span>
@@ -24,32 +31,15 @@ function renderCards(provas) {
   `).join("");
 }
 
+function filtrar(tipo) {
+  const provas = window.provasCache;
+  const filtradas = tipo === "todos" ? provas : provas.filter(p => p.tipo === tipo);
+  renderCards(filtradas);
+
+  document.querySelectorAll(".btn-filtro").forEach(btn => btn.classList.remove("ativo"));
+  event.target.classList.add("ativo");
+}
+
 function verDetalhes(id) {
   window.location.href = `detalhes.html?id=${id}`;
 }
-
-function abrirModal(id) {
-  const p = window.provasCache.find(x => x.id === id);
-  if (!p) return;
-  document.getElementById("detalhesProva").innerHTML = `
-    <span class="detalhe-tipo tipo-${p.tipo}">${tipoLabel[p.tipo]}</span>
-    <p class="detalhe-titulo">${p.titulo}</p>
-    <p class="detalhe-desc">${p.descricao}</p>
-    <div class="detalhe-info">
-      <div class="detalhe-linha"><span class="detalhe-label">Data:</span> ${p.data}</div>
-      <div class="detalhe-linha"><span class="detalhe-label">Arquivo:</span>
-        <a class="detalhe-arquivo" href="#">${p.arquivo}</a>
-      </div>
-      <div class="detalhe-linha"><span class="detalhe-label">Tamanho:</span> ${p.tamanho}</div>
-      ${p.duracao ? `<div class="detalhe-linha"><span class="detalhe-label">Duração:</span> ${p.duracao}</div>` : ""}
-    </div>
-  `;
-  document.getElementById("modal").classList.add("ativo");
-}
-function fecharModal() {
-  document.getElementById("modal").classList.remove("ativo");
-}
-
-document.getElementById("modal").addEventListener("click", function(e) {
-  if (e.target === this) fecharModal();
-});
