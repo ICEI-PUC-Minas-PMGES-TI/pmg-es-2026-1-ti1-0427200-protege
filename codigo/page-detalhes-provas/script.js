@@ -31,9 +31,9 @@ function renderCards(provas) {
   `).join("");
 }
 
-function filtrar(tipo) {
+function filtrar(categoria) {
   const provas = window.provasCache;
-  const filtradas = tipo === "todos" ? provas : provas.filter(p => p.tipo === tipo);
+  const filtradas = categoria === "todos" ? provas : provas.filter(p => p.categoria === categoria);
   renderCards(filtradas);
 
   document.querySelectorAll(".btn-filtro").forEach(btn => btn.classList.remove("ativo"));
