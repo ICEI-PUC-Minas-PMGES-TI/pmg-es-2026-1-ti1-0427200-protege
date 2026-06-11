@@ -115,3 +115,20 @@ function atualizarTabela(lista) {
     tbody.appendChild(linha);
   }
 }
+
+function aplicarFiltros() {
+  var lista = filtrarDenuncias();
+  atualizarCards(lista);
+  atualizarTabela(lista);
+}
+
+function limparFiltros() {
+  document.getElementById("filtroPeriodo").value = "todos";
+  document.getElementById("filtroTipo").value    = "todos";
+  document.getElementById("filtroStatus").value  = "todos";
+  aplicarFiltros();
+}
+
+var botoes = document.querySelectorAll("button");
+botoes[0].addEventListener("click", aplicarFiltros);
+botoes[1].addEventListener("click", limparFiltros);
