@@ -21,5 +21,97 @@
       "email": "rommel@gmail.com",
       "id": 3
     }
+  ],
+
+  "posts": [
+    {
+      "id": 1,
+      "categoria": "Relacionamento abusivo",
+      "titulo": "Tenho medo de denunciar meu parceiro",
+      "descricao": "Ele ameaça pegar meu celular e diz que ninguém vai acreditar em mim.",
+      "respostas": 12
+    },
+    {
+      "id": 2,
+      "categoria": "Ameaça",
+      "titulo": "Estou recebendo ameaças",
+      "descricao": "Meu ex está me perseguindo pelas redes sociais e mandando mensagens.",
+      "respostas": 8
+    },
+    {
+      "id": 3,
+      "categoria": "Ajuda psicológica",
+      "titulo": "Preciso de ajuda psicológica",
+      "descricao": "Estou me sentindo muito pressionada emocionalmente e não sei o que fazer.",
+      "respostas": 5
+    },
+    {
+      "id": 4,
+      "categoria": "Denúncia",
+      "titulo": "Quero denunciar mas tenho medo",
+      "descricao": "Tenho provas contra meu companheiro, mas estou com medo das consequências da denúncia.",
+      "respostas": 14
+    },
+    {
+      "id": 5,
+      "categoria": "Denúncia",
+      "titulo": "Minha família não acredita em mim",
+      "descricao": "Contei sobre as agressões que sofro, mas minha família acha que estou exagerando.",
+      "respostas": 9
+    },
+    {
+      "id": 6,
+      "categoria": "Ameaça",
+      "titulo": "Estou sendo ameaçada pelo meu ex",
+      "descricao": "Depois do término, meu ex começou a mandar mensagens agressivas e aparecer perto da minha casa.",
+      "respostas": 11
+    },
+    {
+      "id": 7,
+      "categoria": "Relacionamento abusivo",
+      "titulo": "Não consigo sair desse relacionamento",
+      "descricao": "Mesmo sabendo que estou em um relacionamento abusivo, tenho medo de terminar e ficar sozinha.",
+      "respostas": 16
+    },
+    {
+      "id": 8,
+      "categoria": "Ajuda psicológica",
+      "titulo": "Estou emocionalmente esgotada",
+      "descricao": "As situações que venho passando estão afetando minha saúde mental e preciso de apoio psicológico.",
+      "respostas": 7
+    }
+  ],
+
+  "comentarios": [
+    {
+      "id": 1,
+      "postId": 1,
+      "texto": "Você não está sozinha. Procure ajuda especializada."
+    },
+    {
+      "id": 2,
+      "postId": 1,
+      "texto": "Tente reunir provas e buscar apoio de pessoas de confiança."
+    },
+    {
+      "id": 3,
+      "postId": 2,
+      "texto": "Guarde prints das mensagens recebidas."
+    },
+    {
+      "id": 4,
+      "postId": 2,
+      "texto": "Considere registrar um boletim de ocorrência."
+    },
+    {
+      "id": 5,
+      "postId": 3,
+      "texto": "Procure atendimento psicológico gratuito na sua região."
+    },
+    {
+      "id": 6,
+      "postId": 3,
+      "texto": "Conversar com alguém de confiança pode ajudar."
+    }
   ]
 }
