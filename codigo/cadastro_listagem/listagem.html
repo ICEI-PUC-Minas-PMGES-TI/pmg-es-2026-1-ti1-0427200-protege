@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Refúgio + — Contatos Cadastrados</title>
+    <title>Protege + — Contatos Cadastrados</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- BARRA DE NAVEGAÇÃO -->
     <nav class="barra-nav">
       <a href="cadastro.html" class="logo-nav">
         <svg
@@ -21,14 +22,16 @@
             d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
           />
         </svg>
-        Refúgio +
+        Protege +
       </a>
       <div class="links-nav">
         <a href="cadastro.html">Cadastrar contato</a>
         <a href="listagem.html" class="ativo">Ver cadastros</a>
       </div>
+      <div class="avatar-usuario">👩🏼‍💻</div>
     </nav>
 
+    <!-- LAYOUT -->
     <div class="layout">
       <!-- MENU LATERAL -->
       <aside class="menu-lateral">
@@ -45,6 +48,7 @@
             <line x1="12" y1="5" x2="12" y2="19" />
             <line x1="5" y1="12" x2="19" y2="12" />
           </svg>
+          Cadastrar contato
         </a>
         <a href="listagem.html" class="item-menu ativo">
           <svg
@@ -66,6 +70,7 @@
         </a>
       </aside>
 
+      <!-- CONTEÚDO PRINCIPAL -->
       <main class="conteudo-principal">
         <div class="cabecalho-com-botao">
           <div class="cabecalho-pagina" style="margin-bottom: 0">
@@ -88,6 +93,7 @@
           </a>
         </div>
 
+        <!-- BARRA DE FERRAMENTAS: busca + filtros -->
         <div class="barra-ferramentas" style="margin-top: 22px">
           <div class="campo-busca-wrap">
             <svg
@@ -121,11 +127,13 @@
           </button>
         </div>
 
+        <!-- LISTA DE CONTATOS (renderizada pelo JS) -->
         <div id="listaContatos" class="lista-contatos"></div>
         <p id="totalContatos" class="total-contatos"></p>
       </main>
     </div>
 
+    <!-- MODAL DE CONFIRMAÇÃO DE EXCLUSÃO -->
     <div
       class="fundo-modal"
       id="modalConfirmacao"
@@ -162,7 +170,7 @@
       </div>
     </div>
 
-    <!-- Notificação flutuante (utilizei IA) -->
+    <!-- Notificação flutuante -->
     <div id="toast"></div>
 
     <!-- Scripts -->
