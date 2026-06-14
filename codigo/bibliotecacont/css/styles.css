@@ -1,0 +1,643 @@
+
+/* ── Reset e base ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', Arial, sans-serif;
+  background: #eef0f5;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 28px 12px;
+}
+
+/* ── Cartão principal ── */
+.cartao-principal {
+  background: #fff;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  padding: 24px 24px 28px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Cabeçalho ── */
+.label-biblioteca {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #aaa;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.titulo-principal {
+  font-size: 26px;
+  font-weight: 900;
+  color: #1a1a2e;
+  margin-bottom: 14px;
+}
+
+/* ── Banner de alerta ── */
+.banner-alerta {
+  background: #fff8e1;
+  border-left: 5px solid #f5a623;
+  border-radius: 11px;
+  padding: 13px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.banner-alerta-texto {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 800;
+  color: #7a4800;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+.banner-alerta-emoji {
+  font-size: 36px;
+  flex-shrink: 0;
+}
+
+/* ── Abas de navegação ── */
+.abas-nav {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-aba {
+  background: #f3f0ff;
+  color: #7c3aed;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 13px;
+  font-size: 11.5px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.15s;
+  letter-spacing: 0.02em;
+  font-family: 'Nunito', Arial, sans-serif;
+}
+
+.btn-aba:hover {
+  background: #ede9ff;
+}
+
+.btn-aba.ativa {
+  background: #7c3aed;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+/* ── Loading spinner ── */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e0e0ee;
+  border-top-color: #7c3aed;
+  border-radius: 50%;
+  animation: girar 0.7s linear infinite;
+  margin: 0 auto 12px;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Mensagem de erro ── */
+.erro-conexao {
+  background: #fff0f3;
+  border: 1.5px solid #ffc8d6;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  color: #b0003a;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* ── Seção de label (subtítulo) ── */
+.label-secao {
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+/* ============================================
+   ABA: SINAIS DE ALERTA
+   ============================================ */
+
+.sinais-container {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.sinais-grid {
+  flex: 1;
+  min-width: 0;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+}
+
+/* Card de sinal */
+.sinal-card {
+  background: #fff;
+  border-radius: 13px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.sinal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.sinal-card-topo {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.sinal-card-corpo {
+  padding: 10px 12px 13px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sinal-card-titulo {
+  font-size: 11.5px;
+  font-weight: 900;
+  color: #1a1a2e;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.sinal-card-resumo {
+  font-size: 11.5px;
+  color: #666;
+  line-height: 1.5;
+  flex: 1;
+  margin-bottom: 9px;
+}
+
+.btn-saiba-mais {
+  display: inline-block;
+  background: #e63566;
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 5px 13px;
+  border-radius: 20px;
+  align-self: flex-start;
+}
+
+/* Ilustração lateral */
+.ilustracao-lateral {
+  width: 115px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 24px;
+}
+
+/* ============================================
+   MODAL
+   ============================================ */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.oculto {
+  display: none;
+}
+
+.modal-caixa {
+  background: #fff;
+  border-radius: 18px;
+  max-width: 420px;
+  width: 100%;
+  padding: 28px 24px 24px;
+  position: relative;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.22);
+  max-height: 88vh;
+  overflow-y: auto;
+}
+
+.modal-fechar {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #f0f0f5;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.modal-emoji-box {
+  border-radius: 14px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.modal-titulo {
+  font-size: 15px;
+  font-weight: 900;
+  color: #1a1a2e;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.modal-subtitulo {
+  font-size: 12px;
+  color: #e63566;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.modal-sabia {
+  background: #fff8e1;
+  border-left: 3px solid #f5a623;
+  border-radius: 8px;
+  padding: 10px 13px;
+  font-size: 12.5px;
+  color: #7a4800;
+  font-weight: 600;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.modal-label-sinais {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.modal-items {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+
+.modal-item {
+  background: #fafafa;
+  border-radius: 9px;
+  padding: 8px 12px 8px 10px;
+  font-size: 13px;
+  color: #444;
+  line-height: 1.6;
+  display: flex;
+  gap: 9px;
+}
+
+.modal-frase {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.65;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.modal-rodape {
+  background: #fff0f3;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 12.5px;
+  color: #b0003a;
+  font-weight: 700;
+  text-align: center;
+  border: 1px solid #ffc8d6;
+}
+
+/* ============================================
+   ABA: TIPOS DE VIOLÊNCIA
+   ============================================ */
+
+.tipos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tipo-card {
+  border-radius: 11px;
+  padding: 13px 15px;
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+}
+
+.tipo-emoji {
+  font-size: 28px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.tipo-nome {
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.tipo-desc {
+  font-size: 12.5px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.tipos-lei {
+  background: #f3e5f5;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 12px;
+  color: #6a1b9a;
+  font-weight: 700;
+  margin-top: 14px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ============================================
+   ABA: MITOS E VERDADES
+   ============================================ */
+
+.mitos-dica {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 14px;
+}
+
+.mitos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mito-item {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid #e0e0ec;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.mito-item.aberto {
+  border-color: #7c3aed;
+}
+
+.mito-pergunta {
+  background: #fafafa;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.mito-item.aberto .mito-pergunta {
+  background: #f5f0ff;
+}
+
+.mito-texto {
+  font-size: 13px;
+  font-weight: 700;
+  color: #c00050;
+}
+
+.mito-seta {
+  font-size: 16px;
+  color: #7c3aed;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.mito-resposta {
+  background: #f0fff8;
+  border-top: 1.5px solid rgba(124, 58, 237, 0.12);
+  padding: 11px 14px;
+  font-size: 13px;
+  color: #1a4a2e;
+  line-height: 1.65;
+  display: none;
+}
+
+.mito-item.aberto .mito-resposta {
+  display: block;
+}
+
+/* ============================================
+   ABA: O QUE FAZER
+   ============================================ */
+
+.passos-dica {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 14px;
+}
+
+.passos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.passo-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 12px 14px;
+  border: 1.5px solid #eee;
+}
+
+.passo-num {
+  background: #e63566;
+  color: #fff;
+  border-radius: 10px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.passo-conteudo {
+  flex: 1;
+}
+
+.passo-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 4px;
+}
+
+.passo-emoji {
+  font-size: 18px;
+}
+
+.passo-titulo {
+  font-size: 13px;
+  font-weight: 900;
+  color: #1a1a2e;
+}
+
+.passo-desc {
+  font-size: 12.5px;
+  color: #555;
+  line-height: 1.65;
+}
+
+.passos-emergencia {
+  background: #fff0f3;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 12.5px;
+  color: #b0003a;
+  font-weight: 700;
+  margin-top: 14px;
+  text-align: center;
+  border: 1px solid #ffc8d6;
+  line-height: 1.6;
+}
+
+/* ============================================
+   SEÇÃO: AJUDA IMEDIATA
+   ============================================ */
+
+.separador {
+  border: none;
+  border-top: 1.5px solid #f0f0f6;
+  margin: 22px 0;
+}
+
+.ajuda-botoes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-180 {
+  background: #e63566;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  padding: 13px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  letter-spacing: 0.02em;
+  font-family: 'Nunito', Arial, sans-serif;
+  transition: background 0.15s;
+}
+
+.btn-180:hover {
+  background: #c4184e;
+}
+
+.chat-anonimo {
+  background: #f7f7fb;
+  border: 1.5px solid #e8e8f0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.chat-titulo {
+  font-size: 13px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 3px;
+}
+
+.chat-desc {
+  font-size: 11px;
+  color: #888;
+  line-height: 1.5;
+}
+
+/* ── Rodapé ── */
+.rodape {
+  text-align: center;
+  font-size: 11px;
+  color: #bbb;
+  margin-top: 18px;
+  line-height: 1.7;
+}
