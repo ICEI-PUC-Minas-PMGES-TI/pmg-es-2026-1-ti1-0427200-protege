@@ -6,6 +6,7 @@
   "directories": {
     "doc": "docs"
   },
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "api": "json-server --watch data/db.json --port 3000"
   },
