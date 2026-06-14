@@ -1,83 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protege+ | Educação</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educação — Violência Doméstica</title>
 
-    <article>
-        <header>
-            <div class="header-titles">
-                <span class="sub-title">Biblioteca de Conteúdo</span>
-                <h2>Educação</h2>
-            </div>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-            <div class="alert-banner">
-                <div class="alert-text">
-                    <h3>ESTÁ EM UM RELACIONAMENTO TÓXICO?</h3>
-                    <p>IDENTIFIQUE OS SINAIS ANTES QUE SEJA TARDE. SUA VIDA IMPORTA.</p>
-                </div>
-                <div class="alert-icon">
-                    <i class="fa-solid fa-heart-circle-exclamation"></i>
-                </div>
-            </div>
-        </header>
+    <!-- CSS próprio -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-        <main class="main-content">
-            
-            <div class="signals-area">
-                <h4 class="block-title">SINAIS DE ALERTA</h4>
-                
-                <div class="signals-grid">
-                    <div class="signal-card purple">
-                        <div class="icon-box"><i class="fa-solid fa-eye"></i></div>
-                        <h5>CIÚME EXCESSIVO</h5>
-                        <button class="btn-more" data-target="modal-ciume">Saiba Mais</button>
-                    </div>
+  <body>
+    <!-- ══════════════════════════════════════
+         CARTÃO PRINCIPAL
+    ══════════════════════════════════════ -->
+    <div class="cartao-principal">
 
-                    <div class="signal-card green">
-                        <div class="icon-box"><i class="fa-solid fa-wallet"></i></div>
-                        <h5>CONTROLE FINANCEIRO</h5>
-                        <button class="btn-more" data-target="modal-financeiro">Saiba Mais</button>
-                    </div>
+      <!-- Cabeçalho -->
+      <div class="label-biblioteca">Biblioteca de Conteúdo</div>
+      <div class="titulo-principal">Educação</div>
 
-                    <div class="signal-card pink">
-                        <div class="icon-box"><i class="fa-solid fa-users-slash"></i></div>
-                        <h5>ISOLAMENTO DOS AMIGOS</h5>
-                        <button class="btn-more" data-target="modal-isolamento">Saiba Mais</button>
-                    </div>
+      <!-- Banner de alerta -->
+      <div class="banner-alerta">
+        <div class="banner-alerta-texto">
+          Está em um relacionamento tóxico?<br />
+          Identifique os sinais antes que seja tarde.<br />
+          Sua vida importa. ❤️
+        </div>
+        <div class="banner-alerta-emoji">💛</div>
+      </div>
 
-                    <div class="signal-card orange">
-                        <div class="icon-box"><i class="fa-solid fa-comments"></i></div>
-                        <h5>HUMILHAÇÃO EM PÚBLICO</h5>
-                        <button class="btn-more" data-target="modal-humilhacao">Saiba Mais</button>
-                    </div>
+      <!-- Abas de navegação -->
+      <nav class="abas-nav">
+        <button class="btn-aba ativa" data-aba="sinais">🚨 Sinais de Alerta</button>
+        <button class="btn-aba" data-aba="tipos">📚 Tipos de Violência</button>
+        <button class="btn-aba" data-aba="mitos">💬 Mitos e Verdades</button>
+        <button class="btn-aba" data-aba="passos">✅ O Que Fazer</button>
+      </nav>
 
-                    <div class="signal-card teal">
-                        <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
-                        <h5>MANIPULAÇÃO (GASLIGHTING)</h5>
-                        <button class="btn-more" data-target="modal-manipulacao">Saiba Mais</button>
-                    </div>
+      <!-- Área de conteúdo (preenchida pelo JS) -->
+      <main id="conteudo-aba">
+        <!-- Conteúdo carregado dinamicamente via fetch -->
+      </main>
 
-                    <div class="signal-card red">
-                        <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
-                        <h5>COMPORTAMENTO AGRESSIVO</h5>
-                        <button class="btn-more" data-target="modal-agressividade">Saiba Mais</button>
-                    </div>
-                </div>
-            </div>
+      <!-- Separador -->
+      <hr class="separador" />
 
-            <div class="support-illustration">
-                <div class="illustration-placeholder">
-                    <i class="fa-solid fa-people-holding-hands"></i>
-                    <p>Você não está sozinha. Temos uma rede pronta para te acolher.</p>
-                </div>
-            </div>
+      <!-- Ajuda Imediata -->
+      <div class="label-secao">Ajuda Imediata</div>
+      <div class="ajuda-botoes">
+        <button class="btn-180" onclick="ligar180()">
+          📞 LIGUE AGORA: 180
+        </button>
+        <div class="chat-anonimo">
+          <div class="chat-titulo">💬 Chat Anônimo</div>
+          <div class="chat-desc">
+            Fale agora com uma profissional de forma sigilosa,
+            sem se identificar e sem julgamentos.
+          </div>
+        </div>
+      </div>
 
-        </main>
+      <!-- Rodapé -->
+      <div class="rodape">
+        Você não está sozinha. Pedir ajuda é um ato de coragem. 💜<br />
+        Lei Maria da Penha — Lei nº 11.340/2006 protege você.
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         MODAL (oculto por padrão)
+    ══════════════════════════════════════ -->
+    <div id="modal" class="modal-overlay oculto">
+      <div class="modal-caixa">
+
+        <!-- Botão fechar -->
+        <button class="modal-fechar" onclick="fecharModal()">✕</button>
+
+        <!-- Header do modal -->
+        <div class="modal-header">
+          <div class="modal-emoji-box" id="modal-emoji-box">
+            <span id="modal-emoji"></span>
+          </div>
+          <div>
+            <div class="modal-titulo" id="modal-titulo"></div>
+            <div class="modal-subtitulo">Isso não é normal — é violência.</div>
+          </div>
+        </div>
+
+        <!-- Sabia que? -->
+        <div class="modal-sabia" id="modal-sabia"></div>
+
+        <!-- Lista de sinais -->
+        <div class="modal-label-sinais">Reconheça os sinais:</div>
+        <div class="modal-items" id="modal-items"></div>
+
+        <!-- Frase de encorajamento -->
+        <div class="modal-frase" id="modal-frase"></div>
+
+        <!-- Rodapé do modal -->
+        <div class="modal-rodape">
+          💡 Converse com alguém de confiança.
+          Ligue <strong>180</strong> — gratuito e sigiloso, 24h.
+        </div>
+
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
 
         

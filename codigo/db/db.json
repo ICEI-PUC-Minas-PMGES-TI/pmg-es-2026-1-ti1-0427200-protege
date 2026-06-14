@@ -1,25 +1,39 @@
 {
-  "usuarios": [
+  "sessoes": [
     {
-      "id": 1,
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
-    },
-    {
-      "id": 2,
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
-    },
-    {
-      "login": "rommel",
-      "senha": "123",
-      "nome": "Rommel",
-      "email": "rommel@gmail.com",
-      "id": 3
+      "data": "14/06/2026, 17:21:34",
+      "nivel_risco": "alto",
+      "pontuacao_risco": 7,
+      "modo": "offline",
+      "respostas": [
+        {
+          "pergunta": "",
+          "resposta": "Sim",
+          "horario": "14/06/2026, 17:21:13"
+        },
+        {
+          "pergunta": "O agressor mora com você?",
+          "resposta": "Sim",
+          "horario": "14/06/2026, 17:21:16"
+        },
+        {
+          "pergunta": "Você sofre ameaças ou humilhações com frequência?",
+          "resposta": "Não",
+          "horario": "14/06/2026, 17:21:20"
+        },
+        {
+          "pergunta": "Seus filhos ou familiares também estão em risco?",
+          "resposta": "Sim",
+          "horario": "14/06/2026, 17:21:25"
+        },
+        {
+          "pergunta": "Você tem alguém de confiança para pedir ajuda?",
+          "resposta": "Não",
+          "horario": "14/06/2026, 17:21:29"
+        }
+      ],
+      "id": "RBCll7-dBoQ"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
