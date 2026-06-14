@@ -1,0 +1,27 @@
+{
+  "name": "pmg-es-2026-1-ti1-0427200-protege",
+  "version": "1.0.0",
+  "description": "Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api": "json-server --watch data/db.json --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0427200-protege.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0427200-protege/issues"
+  },
+  "homepage": "https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0427200-protege#readme",
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.15"
+  }
+}
+

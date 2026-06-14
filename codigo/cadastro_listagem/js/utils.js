@@ -1,39 +1,34 @@
-const CHAVE_BD = "amparo_contatos";
+const URL_API = "http://localhost:3000/contatos";
 
-// ---------- Armazenamento ----------
+// Armazenamento (JSON Server)
 const Armazenamento = {
-  buscarTodos() {
-    try {
-      return JSON.parse(localStorage.getItem(CHAVE_BD) || "[]");
-    } catch {
-      return [];
-    }
+  async buscarTodos() {
+    const resposta = await fetch(URL_API);
+    return resposta.json();
   },
 
-  salvar(lista) {
-    localStorage.setItem(CHAVE_BD, JSON.stringify(lista));
-  },
-
-  adicionar(contato) {
-    const lista = this.buscarTodos();
-    contato.id = Date.now().toString();
+  async adicionar(contato) {
     contato.cadastradoEm = new Date().toLocaleDateString("pt-BR");
-    lista.push(contato);
-    this.salvar(lista);
-    return contato;
+    const resposta = await fetch(URL_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(contato),
+    });
+    return resposta.json();
   },
 
-  remover(id) {
-    const lista = this.buscarTodos().filter((c) => c.id !== id);
-    this.salvar(lista);
+  async remover(id) {
+    await fetch(`${URL_API}/${id}`, { method: "DELETE" });
   },
 
-  buscarPorId(id) {
-    return this.buscarTodos().find((c) => c.id === id) || null;
+  async buscarPorId(id) {
+    const resposta = await fetch(`${URL_API}/${id}`);
+    if (!resposta.ok) return null;
+    return resposta.json();
   },
 };
 
-// ---------- Notificação (Toast) ----------
+// Notificação (Toast)
 function exibirToast(mensagem, tipo = "sucesso") {
   const elemento = document.getElementById("toast");
   if (!elemento) return;
@@ -45,7 +40,7 @@ function exibirToast(mensagem, tipo = "sucesso") {
   }, 3000);
 }
 
-// ---------- Iniciais do avatar ----------
+// ---------- Iniciais do avatar (IA) ----------
 function gerarIniciais(nome) {
   return nome
     .trim()
@@ -55,7 +50,7 @@ function gerarIniciais(nome) {
     .join("");
 }
 
-// ---------- Classe de cor do avatar por nível ----------
+// ---------- Classe de cor do avatar por nível (IA) ----------
 function classeAvatar(nivel) {
   if (nivel === "Familiar") return "avatar-familiar";
   if (nivel === "Amigos") return "avatar-amigos";
@@ -63,7 +58,7 @@ function classeAvatar(nivel) {
   return "avatar-familiar";
 }
 
-// ---------- Classe do badge por nível ----------
+// ---------- Classe do badge por nível (IA) ----------
 function classeBadge(nivel) {
   if (nivel === "Familiar") return "badge-familiar";
   if (nivel === "Amigos") return "badge-amigos";
@@ -71,7 +66,7 @@ function classeBadge(nivel) {
   return "badge-familiar";
 }
 
-// ---------- SVGs reutilizáveis ----------
+// ---------- SVGs reutilizáveis (IA) ----------
 const Icones = {
   lixeira: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>`,
   semResultado: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>`,

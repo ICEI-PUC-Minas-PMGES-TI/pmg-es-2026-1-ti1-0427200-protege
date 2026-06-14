@@ -13,69 +13,75 @@ document.addEventListener("DOMContentLoaded", () => {
   let idParaExcluir = null;
 
   // ----- Renderiza a lista de contatos -----
-  function renderizarLista() {
-    const termoBusca = campoBusca.value.trim().toLowerCase();
-    const todosContatos = Armazenamento.buscarTodos();
+  // → async porque buscarTodos() agora faz uma requisição HTTP
+  async function renderizarLista() {
+    try {
+      const termoBusca = campoBusca.value.trim().toLowerCase();
+      const todosContatos = await Armazenamento.buscarTodos();
 
-    // Aplica filtro de nível e busca por texto
-    const contatosFiltrados = todosContatos.filter((contato) => {
-      const correspondeNivel =
-        filtroAtivo === "todos" || contato.nivel === filtroAtivo;
-      const correspondeBusca =
-        !termoBusca ||
-        contato.nome.toLowerCase().includes(termoBusca) ||
-        contato.email.toLowerCase().includes(termoBusca);
-      return correspondeNivel && correspondeBusca;
-    });
+      const contatosFiltrados = todosContatos.filter((contato) => {
+        const correspondeNivel =
+          filtroAtivo === "todos" || contato.nivel === filtroAtivo;
+        const correspondeBusca =
+          !termoBusca ||
+          contato.nome.toLowerCase().includes(termoBusca) ||
+          contato.email.toLowerCase().includes(termoBusca);
+        return correspondeNivel && correspondeBusca;
+      });
 
-    // Exibe estado vazio se não houver resultados
-    if (contatosFiltrados.length === 0) {
+      if (contatosFiltrados.length === 0) {
+        listaContatos.innerHTML = `
+          <div class="estado-vazio">
+            ${Icones.semResultado}
+            <p>${
+              todosContatos.length === 0
+                ? 'Nenhum contato cadastrado ainda. <a href="cadastro.html">Cadastre o primeiro!</a>'
+                : "Nenhum contato encontrado para esta busca."
+            }</p>
+          </div>`;
+        rodapeTotal.textContent = "";
+        return;
+      }
+
+      listaContatos.innerHTML = contatosFiltrados
+        .map(
+          (contato) => `
+        <div class="cartao-contato" data-id="${contato.id}">
+          <div class="avatar ${classeAvatar(contato.nivel)}">${gerarIniciais(contato.nome)}</div>
+          <div class="info-contato">
+            <div class="nome-contato">${escaparHtml(contato.nome)}</div>
+            <div class="email-contato">${escaparHtml(contato.email)}</div>
+            <span class="badge ${classeBadge(contato.nivel)}">${escaparHtml(contato.nivel)}</span>
+          </div>
+          <div class="telefone-contato">${escaparHtml(contato.telefone)}</div>
+          <div class="acoes-cartao">
+            <button class="botao-icone excluir"
+              data-id="${contato.id}"
+              title="Excluir contato"
+              aria-label="Excluir ${escaparHtml(contato.nome)}">
+              ${Icones.lixeira}
+            </button>
+          </div>
+        </div>
+      `,
+        )
+        .join("");
+
+      const total = contatosFiltrados.length;
+      rodapeTotal.textContent = `${total} contato${total !== 1 ? "s" : ""} encontrado${total !== 1 ? "s" : ""}`;
+
+      listaContatos
+        .querySelectorAll(".botao-icone.excluir")
+        .forEach((botao) => {
+          botao.addEventListener("click", () => abrirModal(botao.dataset.id));
+        });
+    } catch {
       listaContatos.innerHTML = `
         <div class="estado-vazio">
           ${Icones.semResultado}
-          <p>${
-            todosContatos.length === 0
-              ? 'Nenhum contato cadastrado ainda. <a href="cadastro.html">Cadastre o primeiro!</a>'
-              : "Nenhum contato encontrado para esta busca."
-          }</p>
+          <p>Não foi possível carregar os contatos. O servidor está rodando?</p>
         </div>`;
-      rodapeTotal.textContent = "";
-      return;
     }
-
-    // Monta os cards de cada contato
-    listaContatos.innerHTML = contatosFiltrados
-      .map(
-        (contato) => `
-      <div class="cartao-contato" data-id="${contato.id}">
-        <div class="avatar ${classeAvatar(contato.nivel)}">${gerarIniciais(contato.nome)}</div>
-        <div class="info-contato">
-          <div class="nome-contato">${escaparHtml(contato.nome)}</div>
-          <div class="email-contato">${escaparHtml(contato.email)}</div>
-          <span class="badge ${classeBadge(contato.nivel)}">${escaparHtml(contato.nivel)}</span>
-        </div>
-        <div class="telefone-contato">${escaparHtml(contato.telefone)}</div>
-        <div class="acoes-cartao">
-          <button class="botao-icone excluir"
-            data-id="${contato.id}"
-            title="Excluir contato"
-            aria-label="Excluir ${escaparHtml(contato.nome)}">
-            ${Icones.lixeira}
-          </button>
-        </div>
-      </div>
-    `,
-      )
-      .join("");
-
-    // Atualiza o contador de resultados
-    const total = contatosFiltrados.length;
-    rodapeTotal.textContent = `${total} contato${total !== 1 ? "s" : ""} encontrado${total !== 1 ? "s" : ""}`;
-
-    // Associa o evento de excluir a cada botão
-    listaContatos.querySelectorAll(".botao-icone.excluir").forEach((botao) => {
-      botao.addEventListener("click", () => abrirModal(botao.dataset.id));
-    });
   }
 
   // ----- Escapa caracteres especiais para evitar XSS -----
@@ -90,7 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----- Filtros por nível de parentesco -----
   botoesFiltro.forEach((botao) => {
     botao.addEventListener("click", () => {
-      // Remove o estado ativo de todos os filtros
       botoesFiltro.forEach((b) => (b.className = "botao-filtro"));
       filtroAtivo = botao.dataset.filtro;
 
@@ -110,8 +115,9 @@ document.addEventListener("DOMContentLoaded", () => {
   campoBusca.addEventListener("input", renderizarLista);
 
   // ----- Abre o modal de confirmação de exclusão -----
-  function abrirModal(id) {
-    const contato = Armazenamento.buscarPorId(id);
+  // → async porque buscarPorId() agora faz uma requisição HTTP
+  async function abrirModal(id) {
+    const contato = await Armazenamento.buscarPorId(id);
     if (!contato) return;
     idParaExcluir = id;
     mensagemModal.textContent = `Deseja realmente excluir "${contato.nome}"? Esta ação não pode ser desfeita.`;
@@ -125,9 +131,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ----- Confirma a exclusão -----
-  botaoConfirmar.addEventListener("click", () => {
+  // → async porque remover() agora faz uma requisição HTTP
+  botaoConfirmar.addEventListener("click", async () => {
     if (!idParaExcluir) return;
-    Armazenamento.remover(idParaExcluir);
+    await Armazenamento.remover(idParaExcluir);
     fecharModal();
     renderizarLista();
     exibirToast("Contato removido.", "erro");
@@ -135,7 +142,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   botaoCancelar.addEventListener("click", fecharModal);
 
-  // Fecha o modal ao clicar fora dele
   modal.addEventListener("click", (evento) => {
     if (evento.target === modal) fecharModal();
   });

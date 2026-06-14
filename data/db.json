@@ -1,0 +1,13 @@
+{
+  "contatos": [
+    {
+      "nome": "Luk_ Candeia",
+      "email": "lukasnathan62@gmail.com",
+      "telefone": "(31) 98837-8504",
+      "nivel": "Familiar",
+      "cadastradoEm": "14/06/2026",
+      "id": "QeYHafWySA4"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
