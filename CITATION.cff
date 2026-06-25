@@ -1,6 +1,6 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: Protege+ (Refúgio Pizza)
+title: Protege +
 authors:
   - family-names: Pereira Silva
     given-names: Anna Luiza
@@ -16,12 +16,12 @@ authors:
     given-names: Maria Luiza
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Jandre
-    given-names: Caroline Rhaian da Silva
+    family-names: da Silva Jandre
+    given-names: Caroline Rhaian 
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Maia Filho
-    given-names: Danilo de Quadros
+    family-names: de Quadros Maia Filho
+    given-names: Danilo
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: Barros
