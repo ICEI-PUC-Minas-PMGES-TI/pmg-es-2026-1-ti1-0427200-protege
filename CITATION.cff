@@ -1,31 +1,38 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Protege+ (Refúgio Pizza)
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Pereira Silva
+    given-names: Anna Luiza
+  - family-names: Campos Pereira
+    given-names: Matheus
+  - family-names: Almeida Andrade
+    given-names: Beatriz
+  - family-names: Faria Martins
+    given-names: Giovana
+  - family-names: Nathan Matos Candeia
+    given-names: Lukas
+  - family-names: Queiroz Martins da Silva
+    given-names: Maria Luiza
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Jandre
+    given-names: Caroline Rhaian da Silva
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Maia Filho
+    given-names: Danilo de Quadros
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Barros
+    given-names: Diego Augusto de Faria
 keywords:
-  - 
-  - 
-repository-code: 
+  - Violencia
+  - Domestica
+  - Plataforma Web
+  - Apoio a Vitimas
+  - Denuncia
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0427200-protege
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
+date-released: 2026-05-24
