@@ -2,11 +2,43 @@
   "contatos": [
     {
       "nome": "Lukas Nathan Matos Candeia",
-      "email": "lukasnathan62@gmail.com",
-      "telefone": "(31) 98837-8504",
+      "email": "lukas@gmail.com",
+      "telefone": "(31) 9999-9999",
       "nivel": "Familiar",
-      "cadastradoEm": "14/06/2026",
-      "id": "2kHSZyq6SdE"
+      "cadastradoEm": "26/06/2026",
+      "id": "Qo6NfrI3tKE"
+    },
+    {
+      "nome": "Beatriz Almeida Andrade",
+      "email": "beatriz@gmail.com",
+      "telefone": "(31) 98888-8889",
+      "nivel": "Conhecidos",
+      "cadastradoEm": "26/06/2026",
+      "id": "Afoa3RbGqKM"
+    },
+    {
+      "nome": "Giovanna Faria Martins",
+      "email": "gioavanna@gmail.com",
+      "telefone": "(31) 97777-7777",
+      "nivel": "Amigos",
+      "cadastradoEm": "26/06/2026",
+      "id": "sWqXtbtDQWA"
+    },
+    {
+      "nome": "Maria Luiza Queiroz Martins da Silva",
+      "email": "maria@gmail.com",
+      "telefone": "(31) 96666-6666",
+      "nivel": "Familiar",
+      "cadastradoEm": "26/06/2026",
+      "id": "85eDVQIK_48"
+    },
+    {
+      "nome": "Matheus Campos de Almeida Melo",
+      "email": "matheus@gmail.com",
+      "telefone": "(31) 95555-5555",
+      "nivel": "Amigos",
+      "cadastradoEm": "26/06/2026",
+      "id": "cybkjuyIyEk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
