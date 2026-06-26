@@ -15,11 +15,31 @@
       "email": "user@abc.com"
     },
     {
+      "id": 3,
       "login": "rommel",
       "senha": "123",
       "nome": "Rommel",
-      "email": "rommel@gmail.com",
-      "id": 3
+      "email": "rommel@gmail.com"
     }
+  ],
+  "denuncias": [
+    { "id": "den_001", "data": "25/04/2026", "bairro": "Braúnas",    "tipo": "ameaca",      "status": "pendente"  },
+    { "id": "den_002", "data": "25/04/2026", "bairro": "Ouro Preto", "tipo": "fisica",      "status": "resolvido" },
+    { "id": "den_003", "data": "26/04/2026", "bairro": "Contagem",   "tipo": "psicologica", "status": "andamento" },
+    { "id": "den_004", "data": "26/04/2026", "bairro": "Barreiro",   "tipo": "assedio",     "status": "resolvido" },
+    { "id": "den_005", "data": "27/04/2026", "bairro": "Venda Nova", "tipo": "ameaca",      "status": "pendente"  },
+    { "id": "den_006", "data": "27/04/2026", "bairro": "Centro",     "tipo": "fisica",      "status": "andamento" },
+    { "id": "den_007", "data": "28/04/2026", "bairro": "Braúnas",    "tipo": "psicologica", "status": "resolvido" },
+    { "id": "den_008", "data": "29/04/2026", "bairro": "Contagem",   "tipo": "ameaca",      "status": "resolvido" }
+  ],
+  "locais": [
+    { "id": 1, "tipo": "delegacia", "publico": ["adulto", "idoso"],                              "nome": "Delegacia Especializada de Atendimento à Mulher",                        "endereco": "Av. Barbacena, 288 - Barro Preto, BH" },
+    { "id": 2, "tipo": "delegacia", "publico": ["criança", "adolescente"],                       "nome": "Divisão Especializada em Orientação e Proteção à Criança e ao Adolescente", "endereco": "Av. Olegário Maciel, 600 - Centro, BH" },
+    { "id": 3, "tipo": "hospital",  "publico": ["criança", "adolescente", "adulto", "idoso"],   "nome": "Hospital João XXIII",                                                   "endereco": "Av. Professor Alfredo Balena, 400 - Santa Efigênia, BH" },
+    { "id": 4, "tipo": "hospital",  "publico": ["criança", "adolescente", "adulto", "idoso"],   "nome": "Hospital das Clínicas UFMG",                                            "endereco": "Av. Professor Alfredo Balena, 110 - Santa Efigênia, BH" },
+    { "id": 5, "tipo": "hospital",  "publico": ["criança", "adolescente", "adulto", "idoso"],   "nome": "Santa Casa de Belo Horizonte",                                          "endereco": "Av. Francisco Sales, 1111 - Santa Efigênia, BH" },
+    { "id": 6, "tipo": "ong",       "publico": ["adulto", "idoso"],                              "nome": "Casa Tina Martins",                                                     "endereco": "Rua Paraíba, 641 - Funcionários, BH" },
+    { "id": 7, "tipo": "ong",       "publico": ["adulto"],                                       "nome": "Servas - Serviço Social Autônomo",                                      "endereco": "Av. Cristóvão Colombo, 683 - Funcionários, BH" },
+    { "id": 8, "tipo": "apoio",     "publico": ["adulto", "idoso"],                              "nome": "Centro de Referência da Mulher Benvinda",                               "endereco": "Rua Hermilo Alves, 34 - Santa Tereza, BH" }
   ]
 }
