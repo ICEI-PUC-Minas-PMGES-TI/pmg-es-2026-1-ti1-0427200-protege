@@ -3,25 +3,28 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Armazenamento de Provas</title>
-
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
     <header>
+        <h1>ARMAZENE SEUS DOCUMENTOS E PROVAS AGORA</h1>
+        <p class="subtitulo">Cadastre seus arquivos de forma segura</p>
 
-        <h1>
-            ARMAZENE SEUS DOCUMENTOS E PROVAS AGORA
-        </h1>
+        <nav class="acoes-topo">
 
-        <button onclick="logout()">
-            Sair
-        </button>
+            <a href="../page-detalhes-provas/index.html" class="botao-secundario">
+                Ver minhas denúncias
+            </a>
+
+            <a href="../minhas-denuncias/index.html" class="botao-secundario">
+    Ver  andamento de minhas denúncias
+            </a>
+
+        </nav>
 
     </header>
 
@@ -33,42 +36,39 @@
 
             <form id="arquivoForm">
 
-    <input
-        type="text"
-        id="titulo"
-        placeholder="Título"
-        required
-    >
+                <input
+                    type="text"
+                    id="titulo"
+                    placeholder="Título"
+                    required
+                >
 
-    <input
-        type="text"
-        id="tipo"
-        placeholder="Tipo"
-        required
-    >
+                <input
+                    type="text"
+                    id="tipo"
+                    placeholder="Tipo"
+                    required
+                >
 
-    <textarea
-        id="descricao"
-        placeholder="Descrição"
-    ></textarea>
+                <textarea
+                    id="descricao"
+                    placeholder="Descrição"
+                ></textarea>
 
-    <input
-        type="file"
-        id="arquivoInput"
-        accept="image/*,video/*,.pdf"
-        required
-    >
+                <input
+                    type="file"
+                    id="arquivoInput"
+                    accept="image/*,video/*,.pdf"
+                    required
+                >
 
-    <button type="submit">
-        Salvar Arquivo
-    </button>
+                <button type="submit" id="botaoSalvar">
+                    Salvar Arquivo
+                </button>
 
-</form>
-        <section>
+                <p id="mensagem" class="mensagem"></p>
 
-            <h2>Arquivos Salvos</h2>
-
-            <div id="listaArquivos"></div>
+            </form>
 
         </section>
 
