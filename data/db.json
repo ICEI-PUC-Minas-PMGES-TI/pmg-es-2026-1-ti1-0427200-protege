@@ -39,6 +39,14 @@
       "nivel": "Amigos",
       "cadastradoEm": "26/06/2026",
       "id": "cybkjuyIyEk"
+    },
+    {
+      "nome": "Anna Luiza Pinto Pereira",
+      "email": "anna@gmail.com",
+      "telefone": "(31) 94444-4444",
+      "nivel": "Amigos",
+      "cadastradoEm": "26/06/2026",
+      "id": "sC1tHzlegFg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
