@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protege+ | Painel de Estatísticas</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+
+<body>
+
+  <header>
+    <h1>Refúgio Pizza</h1>
+    <p>Painel de Estatísticas</p>
+  </header>
+
+  <main>
+
+    <section class="filtros">
+      <h2>Filtros</h2>
+      <div class="filtros-linha">
+
+        <div class="campo">
+          <label for="filtroPeriodo">Período</label>
+          <select id="filtroPeriodo">
+            <option value="todos">Todos</option>
+            <option value="7">Últimos 7 dias</option>
+            <option value="30">Últimos 30 dias</option>
+            <option value="90">Últimos 3 meses</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="filtroTipo">Tipo de Violência</label>
+          <select id="filtroTipo">
+            <option value="todos">Todos</option>
+            <option value="ameaca">Ameaça</option>
+            <option value="fisica">Física</option>
+            <option value="psicologica">Psicológica</option>
+            <option value="assedio">Assédio</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="filtroStatus">Status</label>
+          <select id="filtroStatus">
+            <option value="todos">Todos</option>
+            <option value="pendente">Pendente</option>
+            <option value="andamento">Em Andamento</option>
+            <option value="resolvido">Resolvido</option>
+          </select>
+        </div>
+
+        <button>Filtrar</button>
+        <button class="btn-limpar">Limpar</button>
+
+      </div>
+    </section>
+
+    <section class="cards">
+
+      <div class="card vermelho">
+        <p class="card-numero">247</p>
+        <p class="card-texto">Total de Denúncias</p>
+      </div>
+
+      <div class="card roxo">
+        <p class="card-numero">58</p>
+        <p class="card-texto">Casos Pendentes</p>
+      </div>
+
+      <div class="card verde">
+        <p class="card-numero">139</p>
+        <p class="card-texto">Casos Resolvidos</p>
+      </div>
+
+      <div class="card amarelo">
+        <p class="card-numero">183</p>
+        <p class="card-texto">Usuárias Cadastradas</p>
+      </div>
+
+    </section>
+
+    <section class="tabela-box">
+      <h3>Denúncias Recentes</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Data</th>
+            <th>Bairro</th>
+            <th>Tipo</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>den_001</td>
+            <td>25/04/2026</td>
+            <td>Braúnas</td>
+            <td><span class="tag tag-ameaca">Ameaça</span></td>
+            <td><span class="status status-pendente">Pendente</span></td>
+          </tr>
+          <tr>
+            <td>den_002</td>
+            <td>25/04/2026</td>
+            <td>Ouro Preto</td>
+            <td><span class="tag tag-fisica">Física</span></td>
+            <td><span class="status status-resolvido">Resolvido</span></td>
+          </tr>
+          <tr>
+            <td>den_003</td>
+            <td>26/04/2026</td>
+            <td>Contagem</td>
+            <td><span class="tag tag-psicologica">Psicológica</span></td>
+            <td><span class="status status-andamento">Em Andamento</span></td>
+          </tr>
+          <tr>
+            <td>den_004</td>
+            <td>26/04/2026</td>
+            <td>Barreiro</td>
+            <td><span class="tag tag-assedio">Assédio</span></td>
+            <td><span class="status status-resolvido">Resolvido</span></td>
+          </tr>
+          <tr>
+            <td>den_005</td>
+            <td>27/04/2026</td>
+            <td>Venda Nova</td>
+            <td><span class="tag tag-ameaca">Ameaça</span></td>
+            <td><span class="status status-pendente">Pendente</span></td>
+          </tr>
+          <tr>
+            <td>den_006</td>
+            <td>27/04/2026</td>
+            <td>Centro</td>
+            <td><span class="tag tag-fisica">Física</span></td>
+            <td><span class="status status-andamento">Em Andamento</span></td>
+          </tr>
+          <tr>
+            <td>den_007</td>
+            <td>28/04/2026</td>
+            <td>Braúnas</td>
+            <td><span class="tag tag-psicologica">Psicológica</span></td>
+            <td><span class="status status-resolvido">Resolvido</span></td>
+          </tr>
+          <tr>
+            <td>den_008</td>
+            <td>29/04/2026</td>
+            <td>Contagem</td>
+            <td><span class="tag tag-ameaca">Ameaça</span></td>
+            <td><span class="status status-resolvido">Resolvido</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+<script src="app.js"></script>
+</body>
+
+</html>
