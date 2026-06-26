@@ -15,73 +15,79 @@
       "email": "user@abc.com"
     },
     {
+      "id": 3,
       "login": "rommel",
       "senha": "123",
       "nome": "Rommel",
-      "email": "rommel@gmail.com",
-      "id": 3
+      "email": "rommel@gmail.com"
     }
   ],
-
   "posts": [
     {
       "id": 1,
       "categoria": "Relacionamento abusivo",
       "titulo": "Tenho medo de denunciar meu parceiro",
       "descricao": "Ele ameaça pegar meu celular e diz que ninguém vai acreditar em mim.",
-      "respostas": 12
+      "respostas": 12,
+      "anonimo": true
     },
     {
       "id": 2,
       "categoria": "Ameaça",
       "titulo": "Estou recebendo ameaças",
       "descricao": "Meu ex está me perseguindo pelas redes sociais e mandando mensagens.",
-      "respostas": 8
+      "respostas": 8,
+      "anonimo": true
     },
     {
       "id": 3,
       "categoria": "Ajuda psicológica",
       "titulo": "Preciso de ajuda psicológica",
       "descricao": "Estou me sentindo muito pressionada emocionalmente e não sei o que fazer.",
-      "respostas": 5
+      "respostas": 5,
+      "anonimo": true
     },
     {
       "id": 4,
       "categoria": "Denúncia",
       "titulo": "Quero denunciar mas tenho medo",
       "descricao": "Tenho provas contra meu companheiro, mas estou com medo das consequências da denúncia.",
-      "respostas": 14
+      "respostas": 14,
+      "anonimo": true
     },
     {
       "id": 5,
       "categoria": "Denúncia",
       "titulo": "Minha família não acredita em mim",
       "descricao": "Contei sobre as agressões que sofro, mas minha família acha que estou exagerando.",
-      "respostas": 9
+      "respostas": 9,
+      "anonimo": true
     },
     {
       "id": 6,
       "categoria": "Ameaça",
       "titulo": "Estou sendo ameaçada pelo meu ex",
       "descricao": "Depois do término, meu ex começou a mandar mensagens agressivas e aparecer perto da minha casa.",
-      "respostas": 11
+      "respostas": 11,
+      "anonimo": true
     },
     {
       "id": 7,
       "categoria": "Relacionamento abusivo",
       "titulo": "Não consigo sair desse relacionamento",
       "descricao": "Mesmo sabendo que estou em um relacionamento abusivo, tenho medo de terminar e ficar sozinha.",
-      "respostas": 16
+      "respostas": 16,
+      "anonimo": true
     },
     {
       "id": 8,
       "categoria": "Ajuda psicológica",
       "titulo": "Estou emocionalmente esgotada",
       "descricao": "As situações que venho passando estão afetando minha saúde mental e preciso de apoio psicológico.",
-      "respostas": 7
+      "respostas": 7,
+      "anonimo": true
     }
   ],
-
   "comentarios": [
     {
       "id": 1,
