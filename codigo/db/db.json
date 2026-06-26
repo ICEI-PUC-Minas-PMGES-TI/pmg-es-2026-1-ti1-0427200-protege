@@ -1,25 +1,40 @@
 {
-  "usuarios": [
+  "denuncias": [
     {
-      "id": 1,
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+      "titulo": "Violência Física",
+      "descricao": "Relato de agressão física em ambiente doméstico.",
+      "tipo": "Violência Física",
+      "data": "25/06/2026",
+      "responsavel": "Delegacia da Mulher",
+      "status": "Em andamento",
+      "protocolo": "DEN-2026001"
     },
     {
-      "id": 2,
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
+      "titulo": "Assédio",
+      "descricao": "Assédio recorrente no ambiente de trabalho.",
+      "tipo": "Assédio",
+      "data": "23/06/2026",
+      "responsavel": "Equipe de Apoio",
+      "status": "Em avaliação",
+      "protocolo": "DEN-2026002"
     },
     {
-      "login": "rommel",
-      "senha": "123",
-      "nome": "Rommel",
-      "email": "rommel@gmail.com",
-      "id": 3
+      "titulo": "Violência Psicológica",
+      "descricao": "Ameaças e intimidações frequentes.",
+      "tipo": "Violência Psicológica",
+      "data": "20/06/2026",
+      "responsavel": "Delegacia Civil",
+      "status": "Concluída",
+      "protocolo": "DEN-2026003"
+    },
+    {
+      "titulo": "Ameaça",
+      "descricao": "Mensagens com ameaças recebidas por aplicativo.",
+      "tipo": "Ameaça",
+      "data": "18/06/2026",
+      "responsavel": "Equipe Jurídica",
+      "status": "Arquivada",
+      "protocolo": "DEN-2026004"
     }
   ]
 }

@@ -1,29 +1,61 @@
 const mensagem = document.getElementById("mensagem");
-const btnCancelar = document.getElementById("cancelar");
-const btnEnviar = document.getElementById("enviar");
 
-btnCancelar.addEventListener("click", function () {
+document.getElementById("cancelar").addEventListener("click", () => {
 
-  const confirmar = confirm("Deseja realmente cancelar a denúncia?");
-
-  if (confirmar) {
-    mensagem.value = "";
-    alert("Denúncia cancelada.");
-  }
+    if(confirm("Cancelar denúncia?")){
+        mensagem.value = "";
+    }
 
 });
-btnEnviar.addEventListener("click", function () {
 
-  const texto = mensagem.value.trim();
 
-  if (texto === "") {
-    alert("Digite uma denúncia antes de enviar.");
-    return;
-  }
-alert("Denúncia enviada com sucesso!");
+document.getElementById("enviar").addEventListener("click", () => {
 
-  console.log("Denúncia:", texto);
+    if(mensagem.value.trim()==""){
+        alert("Descreva o ocorrido.");
+        return;
+    }
 
-  mensagem.value = "";
+    const denuncia={
+
+        titulo:"Denúncia SOS",
+
+        descricao:mensagem.value,
+
+        tipo:"SOS",
+
+        data:new Date().toLocaleDateString("pt-BR"),
+
+        responsavel:"Equipe de Apoio",
+
+        status:"Em avaliação",
+
+        protocolo:"DEN-"+Date.now()
+
+    };
+
+    fetch("http://localhost:3000/denuncias",{
+
+        method:"POST",
+
+        headers:{
+            "Content-Type":"application/json"
+        },
+
+        body:JSON.stringify(denuncia)
+
+    })
+    .then(()=>{
+
+        alert("Denúncia enviada com sucesso!");
+
+        window.location.href="../minhas-denuncias/index.html";
+
+    })
+    .catch(()=>{
+
+        alert("Erro ao enviar denúncia.");
+
+    });
 
 });
