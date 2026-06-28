@@ -1,0 +1,96 @@
+{
+  "sinais": [
+    {
+      "id": "ciume",
+      "emoji": "😤",
+      "titulo": "Ciúme Excessivo",
+      "resumo": "Ele monitora seu celular, controla suas amizades e questiona cada saída sua?",
+      "cor": "#fff3f0",
+      "corBorda": "#f9a58a",
+      "items": [
+        { "icon": "📱", "texto": "Pega seu celular sem pedir e lê todas as suas mensagens" },
+        { "icon": "🚫", "texto": "Não deixa você sair sem ele, mesmo para ver família ou amigas" },
+        { "icon": "😠", "texto": "Fica furioso quando você fala com homens, mesmo colegas de trabalho" },
+        { "icon": "🔍", "texto": "Aparece de surpresa para te 'verificar' ou manda alguém te espionar" },
+        { "icon": "😔", "texto": "Te acusa de traição sem motivo, fazendo você se sentir culpada" }
+      ],
+      "sabia": "Ciúme excessivo é uma das primeiras formas de violência psicológica. Começa devagar e vai aumentando com o tempo.",
+      "frase": "Amor de verdade tem confiança. Você merece se sentir livre e respeitada!"
+    },
+    {
+      "id": "financeiro",
+      "emoji": "💸",
+      "titulo": "Controle Financeiro",
+      "resumo": "Ele impede você de trabalhar, guarda seu dinheiro ou pede conta de cada centavo?",
+      "cor": "#f0f7ff",
+      "corBorda": "#90c0f8",
+      "items": [
+        { "icon": "🏠", "texto": "Não deixa você trabalhar, dizendo que 'lugar de mulher é em casa'" },
+        { "icon": "🧾", "texto": "Pede nota de tudo que você compra e questiona cada real gasto" },
+        { "icon": "💳", "texto": "Coloca tudo no nome dele — casa, carro, contas — para você não ter nada" },
+        { "icon": "🛒", "texto": "Não te dá dinheiro para comida, remédio ou necessidades dos filhos" },
+        { "icon": "📚", "texto": "Impede você de estudar ou fazer cursos para crescer profissionalmente" }
+      ],
+      "sabia": "Quando ele controla o dinheiro, você fica sem como sair da situação. Isso é intencional — é uma armadilha chamada violência econômica.",
+      "frase": "Independência financeira é um direito seu. Ninguém pode te impedir de trabalhar ou ter dinheiro próprio."
+    },
+    {
+      "id": "humilhacao",
+      "emoji": "😢",
+      "titulo": "Humilhação em Público",
+      "resumo": "Ele te xinga, diminui ou te envergonha na frente de outras pessoas?",
+      "cor": "#fef3f8",
+      "corBorda": "#f4a0c8",
+      "items": [
+        { "icon": "🗣️", "texto": "Te chama de 'burra', 'feia', 'inútil' ou 'louca' na frente dos outros" },
+        { "icon": "😂", "texto": "Ri dos seus sonhos e conquistas, fazendo todo mundo achar graça" },
+        { "icon": "📉", "texto": "Diz que você não é capaz de nada e que sem ele você não sobrevive" },
+        { "icon": "😳", "texto": "Te envergonha em público: no mercado, na casa de parentes, na rua" },
+        { "icon": "🔇", "texto": "Fala por você e decide por você, como se você não tivesse opinião" }
+      ],
+      "sabia": "A violência psicológica é tão séria quanto a física. Ela deixa marcas que não aparecem no corpo, mas doem muito na alma.",
+      "frase": "Com o tempo, você pode começar a acreditar nessas mentiras. Mas são mentiras. Você tem valor. Você importa."
+    },
+    {
+      "id": "isolamento",
+      "emoji": "🚪",
+      "titulo": "Isolamento dos Amigos",
+      "resumo": "Ele faz você se afastar da família e amigas, te deixando só com ele?",
+      "cor": "#f3faf0",
+      "corBorda": "#90d878",
+      "items": [
+        { "icon": "👎", "texto": "Fala mal de toda sua família e amigas, inventando brigas e intrigas" },
+        { "icon": "😡", "texto": "Faz cena toda vez que você quer visitar alguém ou sair com amigas" },
+        { "icon": "💔", "texto": "Te faz escolher entre ele e as pessoas que você ama" },
+        { "icon": "📵", "texto": "Monitora suas mensagens e ligações, ou te proíbe de ter celular" },
+        { "icon": "🏠", "texto": "Quer que você fique em casa o tempo todo, apenas para ele e os filhos" }
+      ],
+      "sabia": "O isolamento é uma das táticas mais perigosas. Sem apoio de família e amigas, fica muito mais difícil pedir ajuda.",
+      "frase": "Sua família e suas amigas são sua rede de proteção. Não abra mão delas. Reconecte-se com quem você confia."
+    }
+  ],
+  "tipos": [
+    { "id": 1, "emoji": "👊", "nome": "Física", "cor": "#ff5252", "bg": "#fff0f0", "desc": "Bater, empurrar, apertar, jogar objetos, machucar o corpo de qualquer forma. Se deixou marca ou não, é violência do mesmo jeito." },
+    { "id": 2, "emoji": "🧠", "nome": "Psicológica", "cor": "#7c3aed", "bg": "#f5f0ff", "desc": "Xingar, ameaçar, humilhar, controlar, manipular, fazer você duvidar de si mesma. Machuca a mente e a autoestima." },
+    { "id": 3, "emoji": "💸", "nome": "Econômica", "cor": "#f5a623", "bg": "#fffbf0", "desc": "Controlar seu dinheiro, impedir de trabalhar, tomar seus bens, não pagar pensão dos filhos." },
+    { "id": 4, "emoji": "😔", "nome": "Moral", "cor": "#e63566", "bg": "#fff0f5", "desc": "Falar mal de você para outras pessoas, espalhar mentiras, destruir sua reputação, te difamar nas redes sociais." },
+    { "id": 5, "emoji": "🚫", "nome": "Sexual", "cor": "#1a7a4a", "bg": "#f0fff8", "desc": "Forçar qualquer ato sexual sem seu consentimento, mesmo dentro do casamento. Você sempre tem o direito de dizer NÃO." }
+  ],
+  "mitos": [
+    { "id": 1, "mito": "\"Ele bate, mas me ama muito\"", "verdade": "Amor e violência não andam juntos. Quem ama, respeita. Bater é crime, não é forma de amar." },
+    { "id": 2, "mito": "\"Ele só faz isso quando bebe\"", "verdade": "A bebida não causa violência — o agressor escolhe ser violento. Muitos homens bebem e nunca batem em ninguém." },
+    { "id": 3, "mito": "\"Eu provoquei, fui eu quem causou\"", "verdade": "Nada que você diga ou faça justifica ser agredida. A culpa é sempre de quem agride, nunca de quem é agredida." },
+    { "id": 4, "mito": "\"Em briga de marido e mulher ninguém mete a colher\"", "verdade": "Violência doméstica é crime! Qualquer pessoa pode e deve ligar 180 ou 190 ao testemunhar ou suspeitar." },
+    { "id": 5, "mito": "\"Se fosse tão ruim, ela teria saído\"", "verdade": "Sair é difícil e perigoso. O medo, a dependência financeira e o amor confundem tudo. Ela precisa de apoio, não de julgamento." }
+  ],
+  "passos": [
+    { "id": 1, "num": "1", "emoji": "🏃‍♀️", "titulo": "Saia do perigo imediato", "desc": "Se estiver em perigo agora, saia do local e vá para um lugar seguro: casa de familiar, vizinha de confiança ou delegacia." },
+    { "id": 2, "num": "2", "emoji": "📞", "titulo": "Ligue 180 ou 190", "desc": "O 180 é a Central da Mulher — gratuito, sigiloso, 24h. O 190 é a Polícia. Ambos podem te ajudar agora mesmo." },
+    { "id": 3, "num": "3", "emoji": "🏥", "titulo": "Cuide das marcas", "desc": "Vá a uma UPA ou hospital. Mesmo que não queira registrar BO agora, guarde o atestado médico. Ele é uma prova importante." },
+    { "id": 4, "num": "4", "emoji": "📋", "titulo": "Registre o Boletim de Ocorrência", "desc": "Vá à Delegacia da Mulher (ou qualquer delegacia à noite). Leve documentos seus e dos filhos se puder. Não é obrigatório, mas ajuda." },
+    { "id": 5, "num": "5", "emoji": "⚖️", "titulo": "Peça Medida Protetiva", "desc": "O juiz pode proibir o agressor de chegar perto de você em até 48 horas. Peça na delegacia ou no CREAS da sua cidade." },
+    { "id": 6, "num": "6", "emoji": "🤝", "titulo": "Busque apoio", "desc": "CRAS, CREAS e Casas-Abrigo oferecem apoio psicológico, jurídico e social gratuito. Você não precisa passar por isso sozinha." }
+  ]
+  ,
+"visualizados": []
+}

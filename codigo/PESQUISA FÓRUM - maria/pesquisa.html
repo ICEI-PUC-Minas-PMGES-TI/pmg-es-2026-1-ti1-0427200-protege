@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesquisa de Dúvidas</title>
+
+  <link rel="stylesheet" href="pesquisa.css">
+</head>
+<body>
+
+  <section class="container-geral">
+    
+    <aside class="sidebar">
+
+      <h2>Categorias:</h2>
+
+      <button onclick="filtrarCategoria('Todas')"> Todas </button>
+      <button onclick="filtrarCategoria('Relacionamento abusivo')"> Relacionamento abusivo </button>
+      <button onclick="filtrarCategoria('Ameaça')"> Ameaça </button>
+      <button onclick="filtrarCategoria('Ajuda psicológica')"> Ajuda psicológica </button>
+      <button onclick="filtrarCategoria('Denúncia')"> Denúncia</button>
+
+    </aside>
+
+    <main class="conteudo">
+
+      <h1>Pesquisa de dúvidas</h1>
+
+      <div class="barra-pesquisa">
+
+        <input type="text" id="pesquisa" placeholder="Pesquise dúvidas..." onkeyup="pesquisarPosts()">
+
+      </div>
+
+      <div id="area-posts" class="grid-posts"></div>
+
+    </main>
+
+  </section>
+
+  <script src="pesquisa.js"></script>
+
+</body>
+</html>

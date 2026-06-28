@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Provas de Violência Doméstica</title>
+</head>
+<body>
+
+    <header>
+
+        <h1>
+        PROVAS DE VIOLÊNCIA DOMÉSTICA
+        </h1>
+
+        <p>
+        Arquivos armazenados para consulta.
+        </p>
+
+    </header>
+
+    <div id="filtros">
+  <button class="btn-filtro ativo" onclick="filtrar('todos')">Todos</button>
+  <button class="btn-filtro" onclick="filtrar('ameaca')">Ameaças</button>
+  <button class="btn-filtro" onclick="filtrar('assedio')">Assédio</button>
+  <button class="btn-filtro" onclick="filtrar('violencia')">Violência Doméstica</button>
+</div>
+
+    <main id="listaProvas">
+    </main>
+
+    <div
+        id="modal"
+        class="modal">
+
+        <div class="modal-conteudo">
+
+            <span
+                class="fechar"
+                onclick="fecharModal()">
+                
+            </span>
+
+            <div id="detalhesProva"></div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

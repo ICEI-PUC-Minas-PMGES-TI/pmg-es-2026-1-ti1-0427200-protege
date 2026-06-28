@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+var API_URL = 'http://localhost:3001';
+=======
 var API_URL = 'http://localhost:3000';
+>>>>>>> 372aa990e736337b6dfaf3a7fa0fd4e7a0b53260
 
 function getChecked(grupo) {
   return [...document.querySelectorAll(`.filtro-grupo:nth-of-type(${grupo}) input:checked`)]

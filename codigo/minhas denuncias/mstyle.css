@@ -1,0 +1,335 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    display:flex;
+    background:#f5f2ff;
+}
+
+
+
+.sidebar{
+
+    width:240px;
+    height:100vh;
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    background:white;
+
+    padding:30px;
+
+    box-shadow:2px 0 12px rgba(0,0,0,.08);
+
+}
+
+.sidebar h2{
+
+    color:#6d4cff;
+    margin-bottom:40px;
+
+}
+
+.sidebar a{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:#666;
+
+    padding:14px;
+
+    margin-bottom:10px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover,
+.sidebar .ativo{
+
+    background:#ede8ff;
+
+    color:#6d4cff;
+
+}
+
+
+
+.conteudo{
+
+    margin-left:240px;
+
+    width:calc(100% - 240px);
+
+    min-height:100vh;
+
+    padding:40px;
+
+}
+
+.topo{
+
+    margin-bottom:30px;
+
+}
+
+.topo h1{
+
+    color:#2f234f;
+
+    font-size:40px;
+
+    margin-bottom:8px;
+
+}
+
+.topo p{
+
+    color:#777;
+
+}
+
+#contador{
+
+    color:#6d4cff;
+
+    margin-bottom:20px;
+
+    font-size:18px;
+
+}
+
+
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin-bottom:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.esquerda{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.icone{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+.vermelho{
+
+    background:#ef4444;
+
+}
+
+.amarelo{
+
+    background:#f59e0b;
+
+}
+
+.verde{
+
+    background:#22c55e;
+
+}
+
+.roxo{
+
+    background:#8b5cf6;
+
+}
+
+.info h2{
+
+    color:#2f234f;
+
+    margin-bottom:10px;
+
+}
+
+.info p{
+
+    margin:6px 0;
+
+    color:#666;
+
+}
+
+/* LADO DIREITO */
+
+.direita{
+
+    text-align:right;
+
+}
+
+.status{
+
+    padding:8px 16px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    display:inline-block;
+
+    margin-bottom:15px;
+
+}
+
+.andamento{
+
+    background:#ffe5e5;
+
+    color:#dc2626;
+
+}
+
+.avaliacao{
+
+    background:#fff5d7;
+
+    color:#b45309;
+
+}
+
+.concluida{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+.arquivada{
+
+    background:#ede9fe;
+
+    color:#6d28d9;
+
+}
+
+.protocolo{
+
+    color:#777;
+
+    margin-bottom:15px;
+
+}
+
+.btn-detalhes{
+
+    background:#6d4cff;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn-detalhes:hover{
+
+    background:#5b3ff0;
+
+}
+
+@media(max-width:900px){
+
+    .card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .direita{
+
+        text-align:left;
+
+    }
+
+    .conteudo{
+
+        margin-left:0;
+
+        width:100%;
+
+        padding:20px;
+
+    }
+
+    .sidebar{
+
+        display:none;
+
+    }
+
+}

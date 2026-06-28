@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protege+ | Educação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="cartao-principal">
+
+        <div class="label-biblioteca">Biblioteca de Conteúdo</div>
+        <h2 class="titulo-principal">Educação</h2>
+
+        <div class="banner-alerta">
+            <div class="banner-alerta-texto">
+                Está em um relacionamento tóxico?<br>
+                Identifique os sinais antes que seja tarde. Sua vida importa.
+            </div>
+            <div class="banner-alerta-emoji">💔</div>
+        </div>
+
+        <nav class="abas-nav">
+            <button class="btn-aba ativa" data-aba="sinais">🚩 Sinais</button>
+            <button class="btn-aba" data-aba="tipos">📖 Tipos</button>
+            <button class="btn-aba" data-aba="mitos">❓ Mitos</button>
+            <button class="btn-aba" data-aba="passos">🆘 O que fazer</button>
+        </nav>
+
+        <div id="conteudo-aba">
+            <div class="loading">
+                <div class="spinner"></div>
+                Carregando dados...
+            </div>
+        </div>
+
+        <hr class="separador">
+
+        <div class="ajuda-botoes">
+            <button class="btn-180" onclick="ligar180()">
+                📞 Ligar 180 agora
+            </button>
+            <a href="../Matheus/painel_estatistica/index.html" class="btn-estatisticas">
+    📊 Estatísticas
+</a>
+        </div>
+
+        <div class="rodape">
+            Protege+ • Conteúdo educativo sobre violência doméstica<br>
+            Em caso de emergência, ligue 190 (Polícia) ou 180 (Central da Mulher)
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MODAL: detalhes de cada sinal de alerta -->
+    <!-- ============================================ -->
+    <div id="modal" class="modal-overlay oculto">
+        <div class="modal-caixa">
+            <button class="modal-fechar" onclick="fecharModal()">✕</button>
+
+            <div class="modal-header">
+                <div id="modal-emoji-box" class="modal-emoji-box">
+                    <span id="modal-emoji"></span>
+                </div>
+                <div>
+                    <div id="modal-titulo" class="modal-titulo"></div>
+                </div>
+            </div>
+
+            <div id="modal-sabia" class="modal-sabia"></div>
+
+            <div id="modal-items" class="modal-items"></div>
+
+            <div id="modal-frase" class="modal-frase"></div>
+
+            <div class="modal-rodape">
+                🆘 Precisa de ajuda agora? Ligue 180 ou 190.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

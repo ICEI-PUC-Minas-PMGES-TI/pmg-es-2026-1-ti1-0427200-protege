@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armazenamento de Provas</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header>
+        <h1>ARMAZENE SEUS DOCUMENTOS E PROVAS AGORA</h1>
+        <p class="subtitulo">Cadastre seus arquivos de forma segura</p>
+
+        <nav class="acoes-topo">
+
+            <a href="../page-detalhes-provas/index.html" class="botao-secundario">
+                Ver minhas provas
+            </a>
+
+            <a href="../minhas denuncias/index.html" class="botao-secundario">
+                Ver andamento de minhas denúncias
+            </a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="formulario">
+
+            <h2>Cadastrar Arquivo</h2>
+
+            <form id="arquivoForm">
+
+                <input
+                    type="text"
+                    id="titulo"
+                    placeholder="Título"
+                    required
+                >
+
+                <select id="tipo" required>
+                    <option value="" disabled selected>Selecione o tipo de arquivo</option>
+                    <option value="foto">Foto</option>
+                    <option value="video">Vídeo</option>
+                    <option value="audio">Áudio</option>
+                    <option value="documento">Documento</option>
+                </select>
+
+                <select id="categoria" required>
+                    <option value="" disabled selected>Selecione a categoria</option>
+                    <option value="ameaca">Ameaças</option>
+                    <option value="assedio">Assédio</option>
+                    <option value="violencia">Violência Doméstica</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <textarea
+                    id="descricao"
+                    placeholder="Descrição"
+                ></textarea>
+
+                <input
+                    type="file"
+                    id="arquivoInput"
+                    accept="image/*,video/*,.pdf"
+                    required
+                >
+
+                <button type="submit" id="botaoSalvar">
+                    Salvar Arquivo
+                </button>
+
+                <p id="mensagem" class="mensagem"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
