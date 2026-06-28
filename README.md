@@ -1,4 +1,4 @@
-# Refúgio Pizza
+# Protege+
 
 Este projeto nasceu da vontade de ajudar pessoas que sofrem violência doméstica e que, muitas vezes, não sabem como ou onde pedir socorro. Por isso, a equipe está desenvolvendo uma plataforma web segura e sigilosa, onde vítimas de diferentes perfis, como mulheres, crianças, idosas e pessoas LGBTQIA+, possam encontrar apoio de forma simples e acessível, sem precisar sair de casa ou se expor a riscos maiores.
 
