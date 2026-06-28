@@ -6,7 +6,7 @@
   "scripts": {
     "server1": "json-server --watch db/db.json --port 3001",
     "server2": "json-server --watch db/db2.json --port 3002",
-    "server3": "json-server --watch db/db.json --port 3000",
+    "server3": "json-server --watch ../data/db.json --port 3000",
     "start-all": "concurrently \"npm run server1\" \"npm run server2\" \"npm run server3\""
   },
   "keywords": [],
