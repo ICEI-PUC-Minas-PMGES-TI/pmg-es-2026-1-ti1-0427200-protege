@@ -8,7 +8,7 @@ Informações básicas do projeto.
   - [Anna Luiza Pereira Silva](https://github.com/annaluizapsilva-03)
   - [Beatriz Almeida Andrade](https://github.com/biaalmeidaandradee7-crypto)
   - [Giovana Faria Martins](https://github.com/giovanafariaa)
-  - [Lukas Nathan Matos Candeia](https://github.com/cicrano)
+  - [Lukas Nathan Matos Candeia](https://github.com/LukCandeia)
   - [Maria Luiza Queiroz Martins da Silva](https://github.com/mariaqueirozz)
   - [Matheus Campos Pereira](https://github.com/Matheuscamp)
 
