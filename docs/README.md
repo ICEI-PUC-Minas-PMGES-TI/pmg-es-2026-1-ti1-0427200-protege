@@ -191,7 +191,7 @@ Esta seção apresenta todos os detalhes da solução criada no projeto.
 
 ## Vídeo do Projeto
 
-O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. ⚠️ EXEMPLO ⚠️
+O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução.
 
 [Vídeo do projeto](https://drive.google.com/file/d/1xTUYgOhwPOpp53TdFl3HJR2Nq_fBIc5M/view?usp=drive_link)
 
