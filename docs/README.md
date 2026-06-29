@@ -174,8 +174,6 @@ Estes são os protótipos de telas do sistema.
 
 **✳️✳️✳️ COLOQUE AQUI O DIAGRAMA DE FLUXO DE TELAS ✳️✳️✳️**
 
-![Exemplo de fluxo de telas](images/exemplo-userflow.png)
-
 <img src="./images/fluxo_de_paginas.png">
 
 ### Protótipo Interativo
@@ -190,13 +188,11 @@ Detalhes sobre a organização do grupo e o ferramental empregado.
 
 Relação de ferramentas empregadas pelo grupo durante o projeto.
 
-| Ambiente | Plataforma | Link de acesso |
-| Processo de Design Thinking | Miro | https://miro.com/app/board/uXjVGvSbycg=/|
-| Repositório de código | GitHub | https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0427200-protege |
-| Hospedagem do site | *(a definir)* | *(adicionar link)* |
-| Protótipo Interativo | Figma | https://www.figma.com/design/lXR7KDcyXh9lFUwJEylr2W/G3---Viol%C3%AAncia-Dom%C3%A9stica?t=82K9kQzsXFl8SmUS-0 |
-| Comunicação da equipe | WhatsApp | 
-| Editor de código | VS Code | https://code.visualstudio.com/ |
+Processo de Design Thinking | Miro | https://miro.com/app/board/uXjVGvSbycg=/
+Repositório de código | GitHub | https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0427200-protege
+Protótipo Interativo | Figma | https://www.figma.com/design/lXR7KDcyXh9lFUwJEylr2W/G3---Viol%C3%AAncia-Dom%C3%A9stica?t=82K9kQzsXFl8SmUS-0
+Comunicação da equipe | WhatsApp
+Editor de código | VS Code | https://code.visualstudio.com/
 
 # Solução Implementada
 
@@ -206,7 +202,7 @@ Esta seção apresenta todos os detalhes da solução criada no projeto.
 
 O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. ⚠️ EXEMPLO ⚠️
 
-[![Vídeo do projeto]](https://drive.google.com/file/d/1xTUYgOhwPOpp53TdFl3HJR2Nq_fBIc5M/view?usp=drive_link)
+[Vídeo do projeto](https://drive.google.com/file/d/1xTUYgOhwPOpp53TdFl3HJR2Nq_fBIc5M/view?usp=drive_link)
 
 ## Funcionalidades
 
