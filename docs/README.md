@@ -6,12 +6,12 @@ Informações básicas do projeto.
 * **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0427200-protege
 * **Membros da equipe:**
 
-  * [Anna Luiza Pereira Silva](https://github.com/beltrano)
-  * [Beatriz Almeida Andrade](https://github.com/cicrano)
-  * [Giovana Faria Martins](https://github.com/cicrano)
+  * [Anna Luiza Pereira Silva](https://github.com/annaluizapsilva-03)
+  * [Beatriz Almeida Andrade](https://github.com/biaalmeidaandradee7-crypto)
+  * [Giovana Faria Martins](https://github.com/giovanafariaa)
   * [Lukas Nathan Matos Candeia](https://github.com/cicrano)
-  * [Maria Luiza Queiroz Martins da Silva](https://github.com/cicrano)
-  * [Matheus Campos Pereira](https://github.com/fulano)
+  * [Maria Luiza Queiroz Martins da Silva](https://github.com/mariaqueirozz)
+  * [Matheus Campos Pereira](https://github.com/Matheuscamp)
 
 A documentação do projeto é estruturada da seguinte forma:
 
@@ -110,10 +110,6 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 | Fernanda (mulher trans) | Denunciar de forma anônima e expor o agressor | Me proteger e alertar outras pessoas sobre o perigo |
 | Marilene (idosa) | Me informar sobre os perigos da minha cidade e sentir segurança ao sair sozinha | Manter minha independência sem correr riscos |
 | Cláudia (vítima de dependência emocional) | Receber apoio psicológico e orientação jurídica pelo chat | Ter coragem de me libertar da situação e buscar ajuda profissional |
-| Qualquer usuário | Cadastrar contatos de confiança na plataforma | Garantir que alguém de confiança seja acionado em caso de emergência |
-| Qualquer usuário | Guardar provas (fotos, áudios e documentos) com senha de acesso | Preservar evidências para uso em processos judiciais com segurança |
-| Qualquer usuário | Acessar um mapa com redes de apoio próximas | Encontrar delegacias, hospitais e ONGs de forma rápida e sem precisar pesquisar em outros lugares |
-| Qualquer usuário | Acessar uma biblioteca de conteúdos educativos | Entender melhor o que é violência doméstica e como identificá-la |
 
 ## Proposta de Valor
 
