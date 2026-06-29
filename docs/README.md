@@ -222,7 +222,7 @@ Exibe uma lista com delegacias, hospitais e ONGs próximas à localização do u
   - Clique em "Locais de ajuda" no menu
   - Visualize os pontos de suporte próximos e clique para obter detalhes
 
-<img src="./images/denuncia_rapida.png">
+<img src="./images/locais_de_ajuda.png">
 
 ---
 
