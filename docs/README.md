@@ -376,7 +376,7 @@ Descrição das estruturas de dados utilizadas na solução com exemplos no form
 
 ##### Estrutura de Dados - Contatos
 
-Contatos da aplicação
+Contatos da apoio
 
 ```json
 {
