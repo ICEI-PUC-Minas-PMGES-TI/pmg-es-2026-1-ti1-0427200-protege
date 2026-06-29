@@ -1,27 +1,21 @@
 let posts = [];
 
-async function carregarPosts(){
+async function carregarPosts() {
+  const resposta = await fetch("http://localhost:3001/posts");
 
-    const resposta = await fetch("http://localhost:3000/posts");
+  posts = await resposta.json();
 
-    posts = await resposta.json();
-
-    mostrarPosts(posts);
-
+  mostrarPosts(posts);
 }
 
 carregarPosts();
 
-
-function mostrarPosts(listaPosts){
-
+function mostrarPosts(listaPosts) {
   let areaPosts = document.getElementById("area-posts");
 
   areaPosts.innerHTML = "";
 
-
   listaPosts.forEach((post) => {
-
     areaPosts.innerHTML += `
 
       <div class="card">
@@ -51,57 +45,31 @@ function mostrarPosts(listaPosts){
       </div>
 
     `;
-
   });
-
 }
 
-function pesquisarPosts(){
-
-  let valorPesquisa = document
-    .getElementById("pesquisa")
-    .value
-    .toLowerCase();
-
+function pesquisarPosts() {
+  let valorPesquisa = document.getElementById("pesquisa").value.toLowerCase();
 
   let filtrados = posts.filter((post) =>
-
-    post.titulo
-      .toLowerCase()
-      .includes(valorPesquisa)
-
+    post.titulo.toLowerCase().includes(valorPesquisa),
   );
 
-
   mostrarPosts(filtrados);
-
 }
 
-function filtrarCategoria(categoria){
-
-  if(categoria == "Todas"){
-
+function filtrarCategoria(categoria) {
+  if (categoria == "Todas") {
     mostrarPosts(posts);
 
     return;
-
   }
 
-
-  let filtrados = posts.filter((post) =>
-
-    post.categoria == categoria
-
-  );
-
+  let filtrados = posts.filter((post) => post.categoria == categoria);
 
   mostrarPosts(filtrados);
-
 }
 
-function abrirPost(id){
-
-    window.location.href =
-    `post.html?id=${id}`;
-
+function abrirPost(id) {
+  window.location.href = `post.html?id=${id}`;
 }

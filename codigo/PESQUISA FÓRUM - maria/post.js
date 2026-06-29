@@ -2,19 +2,18 @@ const parametros = new URLSearchParams(window.location.search);
 const id = parametros.get("id");
 
 async function carregarPost() {
+  const resposta = await fetch("http://localhost:3001/posts");
+  const posts = await resposta.json();
 
-    const resposta = await fetch("http://localhost:3000/posts");
-    const posts = await resposta.json();
+  const post = posts.find((p) => p.id == id);
 
-    const post = posts.find(p => p.id == id);
+  if (!post) {
+    document.getElementById("post-container").innerHTML =
+      "<h2>Post não encontrado.</h2>";
+    return;
+  }
 
-    if (!post) {
-        document.getElementById("post-container").innerHTML =
-            "<h2>Post não encontrado.</h2>";
-        return;
-    }
-
-    document.getElementById("post-container").innerHTML = `
+  document.getElementById("post-container").innerHTML = `
 
         <div class="post">
 
@@ -39,33 +38,29 @@ async function carregarPost() {
 
     `;
 
-    carregarComentarios();
+  carregarComentarios();
 }
 
 async function carregarComentarios() {
+  const resposta = await fetch("http://localhost:3001/comentarios");
 
-    const resposta = await fetch("http://localhost:3000/comentarios");
+  const comentarios = await resposta.json();
 
-    const comentarios = await resposta.json();
+  const lista = document.getElementById("lista-comentarios");
 
-    const lista = document.getElementById("lista-comentarios");
+  lista.innerHTML = "";
 
-    lista.innerHTML = "";
-
-    comentarios
-        .filter(comentario => comentario.postId == id)
-        .forEach(comentario => {
-
-            lista.innerHTML += `
+  comentarios
+    .filter((comentario) => comentario.postId == id)
+    .forEach((comentario) => {
+      lista.innerHTML += `
 
                 <div class="comentario">
                     ${comentario.texto}
                 </div>
 
             `;
-
-        });
-
+    });
 }
 
 carregarPost();
